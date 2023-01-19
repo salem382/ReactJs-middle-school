@@ -1,0 +1,12 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixin.scss';
+.navbar {
+    .nav-login {
+        @include blue-btn (100px, $blueColor);
+        box-shadow: none;
+        display: block;
+    }
+    .icon {
+        cursor: pointer;
+    }
+}

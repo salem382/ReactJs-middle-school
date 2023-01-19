@@ -1,0 +1,58 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixin.scss';
+.sidebar {
+    background: $sidebarBg;
+    padding: 40px 24px;
+    height: 100vh;
+    position: fixed;
+    width: 300px;
+    transition: all .3s ease-in-out;
+    top: 0;
+    ul li {
+        @include text-style;
+        padding:12px;
+        &:hover {
+            @include blue-btn (80%, $blueColor);
+        }
+    }
+    .pro {
+        background-color: $redColor;
+        position: relative;
+        color: #fff;
+        border-radius: 24px;
+        width: 192px;
+        height: 138px;
+        padding:15px;
+        padding-bottom: 30px;
+        h3 {
+            font-weight: 700;
+            font-size: 16px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 12px;
+        }
+        .try-btn {
+            width: 70%;
+            text-align: center;
+            padding: 7px 0;
+            border-radius: 20px;
+            font-size: 14px;
+            background: linear-gradient(102.25deg, #04AFBA 11.68%, #00C8D5 89.82%);
+            cursor: pointer;
+        }
+        .rocket {
+            position: absolute;
+            right: -18px;
+            top: 20px;
+        }
+    }
+    .sett-btn {
+        margin-top: 20px;
+        @include text-style;
+        padding:12px;
+        &:hover {
+            @include blue-btn (80%, $blueColor);
+        }
+    }
+}

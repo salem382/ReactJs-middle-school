@@ -1,0 +1,28 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixin.scss';
+.logo {
+    .logo-img {
+        background-size: cover;
+        width: 62px;
+        height: 63px;
+        position: relative;
+        .left {
+            position: absolute;
+            left: 8px;
+            top: 17px;
+        }
+        .right {
+            position: absolute;
+            top: 8px;
+            right: 6px;
+        }
+    }
+    span:first-of-type {
+        color: $blueColor;
+        font-weight: bolder;
+    }
+    span:last-of-type {
+        color: $redColor;
+        font-weight: bold;
+    }
+}

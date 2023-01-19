@@ -1,0 +1,24 @@
+@import '../../../sass/variables.scss';
+.guy-draw {
+    width:30%;
+    background: #35CCED;
+    position: relative;
+    height: 100vh;
+    .hill {
+        position: absolute;
+        width: 423px;
+        height: 310px;
+        left: -30px;
+        bottom: -35%;
+        background-color: #00C271;
+        border-radius: 50%;
+        z-index: 8;
+    }
+    .boy {
+        position: absolute;
+        top: 230px;
+        left: -40px;
+        width: 420px;
+        z-index: 9;
+    }
+}

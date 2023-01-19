@@ -1,0 +1,55 @@
+@import '../../../sass/variables.scss';
+.signup-form {
+    height: 100vh;
+    border-top-left-radius: 20px;
+    background-color: #fff;
+    position: absolute;
+    width: 75%;
+    right: 0;
+    top: 0;
+    .or {
+        font-weight: 400;
+        font-size: 18px;
+        color: #C1C1C1;
+    }
+    form {
+        text-align: center;
+        ::placeholder {
+            color: #C1C1C1;
+        }
+        input {
+            border: none;
+            border-bottom: 1px solid #C1C1C1;
+            width: 75%;
+            outline: none;
+            margin: 10px 0;
+        }
+    }
+    @media (max-width:992px) {
+        width: 100%;
+    }
+    .btn-create-account {
+        display: block;
+        background-color: $blueColor;
+        width: 75%;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: bolder;
+        margin: 20px auto 0 auto;
+        border: none;
+        padding: 8px;
+        font-size: 24px;
+    }
+    .login {
+        width: 75%;
+        margin: 10px auto 0 auto;
+        color: #C1C1C1;
+        font-size: 13px;
+        span:last-of-type {
+            color: #35CCED;
+            cursor: pointer;
+
+        }
+        padding-bottom: 30px;
+    }
+}
