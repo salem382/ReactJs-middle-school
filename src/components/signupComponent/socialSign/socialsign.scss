@@ -1,23 +1,31 @@
-.social-sign {
+.create-account {
     h3 {
         font-weight: 600;
         font-size: 40px;
-    }
-    & > p {
-        border: 1px solid #35CCED;
-        border-radius: 10px;
-        padding: 10px;
-        cursor: pointer;
-        width: 250px;
-        @media (min-width:772px) {
-            &:first-of-type {
-                margin-right: 25px;
-            }
+        @media (max-width:560px) {
+            text-align: center;
         }
-    } 
-    @media (max-width:772px) {
-        width: 60%;
-        margin: auto;
-        flex-wrap: wrap;
+    }
+    .social-sign {
+        & > p {
+            border: 1px solid #35CCED;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+            width: 230px;
+            @media (min-width:560px) {
+                &:first-of-type {
+                    margin-right: 25px;
+                }
+            }
+            @media (max-width:560px) {
+            width: 350px;
+            }
+        } 
+        @media (max-width:560px) {
+            width: 60%;
+            margin: auto;
+            flex-wrap: wrap;
+        }
     }
 }
