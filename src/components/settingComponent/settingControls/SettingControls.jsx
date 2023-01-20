@@ -3,17 +3,21 @@ import './settingcontrols.scss';
 const SettingControls = () => {
 
     return (
-        <section className='setting-controls mt-5 w-75 m-auto'>
+        <section className='setting-controls mt-5 m-auto'>
             <Container>
-                <div className='d-flex justify-content-between'>
-                    <div>
-                        <button className='per-info'>Personal Information</button>
-                        <button className='pass'>Password</button>
-                    </div>
-                    <div>
-                        <button className='log-out'>Log Out</button>
-                    </div>
-                </div>
+                <Row>
+                    <Col  md = {6} className='col-9'>
+                        <div>
+                            <button className='per-info'>Personal Information</button>
+                            <button className='pass'>Password</button>
+                        </div>
+                    </Col>
+                    <Col  md= {6} className='col-3'>
+                        <div>
+                            <button className='log-out m-auto d-block'>Log Out</button>
+                        </div>
+                    </Col>            
+                </Row>
             </Container>
             
         </section>
