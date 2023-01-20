@@ -13,7 +13,6 @@ import { useSelector } from 'react-redux';
 const Home = () => {
 
     const {openSidebar, sidebarWidth, screeSize} = useSelector(state => state.sidebarSlice);
-    
 
     return (
         <>

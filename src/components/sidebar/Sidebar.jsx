@@ -33,7 +33,7 @@ const Sidebar = () => {
          className='sidebar'
         >
             <div className='position-absolute '
-            style={{right:'-20px', top:'17px'}}
+            style={{right:'-35px', top:'17px'}}
             >
                 <FontAwesomeIcon style={{cursor:'pointer'}} onClick={() => dispatch(setOpenSidebar(!openSidebar))}  className='fs-5 icon' icon={faBars}/>
             </div>
