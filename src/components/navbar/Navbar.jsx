@@ -4,14 +4,18 @@ import {faBars, faBell} from '@fortawesome/free-solid-svg-icons';
 import {faRocketchat} from '@fortawesome/free-brands-svg-icons';
 import {Container} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import {setOpenSidebar} from '../../store/sidebarRouteSlice';
 
-const Navbar = ({setOpenSidebarFun}) => {
+const Navbar = () => {
+
+    const dispatch = useDispatch(); 
 
     return (
         <Container>
             <div className='navbar d-flex py-2 justify-content-between'>
                 <div>
-                    <FontAwesomeIcon onClick={() =>setOpenSidebarFun(true) } className='fs-5 icon' icon={faBars}/>
+                    <FontAwesomeIcon onClick={() => dispatch(setOpenSidebar(true))}  className='fs-5 icon' icon={faBars}/>
                 </div>
                 <div className='d-flex align-items-center'>
                     <span>

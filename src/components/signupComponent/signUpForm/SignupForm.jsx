@@ -1,14 +1,12 @@
 import './signup.scss';
 import Socialsign from '../socialSign/Socialsign';
 import {Link} from 'react-router-dom';
+import TopPartSignup from '../topPartSignUp/TopPartSignup';
 const SignUpForm = () => {
 
     return (
-        <section className='signup-form px-5'>
-           <div className='top-part border d-flex justify-content-between'>
-               <p>newbrains</p> 
-               <p>English</p> 
-           </div>
+        <section className='signup-form'>
+            <TopPartSignup />
             <Socialsign head ={'Create Account'} />
            <form>
                 <input placeholder='Full Name' type='text' />

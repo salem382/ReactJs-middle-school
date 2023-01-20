@@ -4,7 +4,7 @@ const Socialsign = ({head}) => {
 return (
     <div className='create-account d-flex justify-content-center'>
     <div>
-        <h3 className='mt-3'>{head}</h3>
+        <h3 className='mt-2'>{head}</h3>
         <div className='social-sign d-flex mt-3'>
             <p className='d-flex'>
                 <img src='./imgs/google.ico' alt='google' className='me-2'

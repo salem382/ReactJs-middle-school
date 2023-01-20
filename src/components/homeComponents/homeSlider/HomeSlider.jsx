@@ -7,15 +7,8 @@ import {Container, Row, Col} from 'react-bootstrap'
 const Homeslider = () => {
 
     return (
-        <div>
-            home slider
-            {
-                /*
-                 example for fontawesome icon
-                    
-                 <FontAwesomeIcon icon={faUser}/>
-                */
-            }
+        <div className='home-slider'>
+            
         </div>
     )
 }

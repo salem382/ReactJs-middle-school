@@ -7,17 +7,16 @@ import StartConversion from '../../components/homeComponents/startConversition/S
 import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
 import './home.scss';
-import { useState } from 'react';
+
 
 
 const Home = () => {
 
-    const [openSidebar, setOpenSidebar] = useState(false);
-    const setOpenSidebarFun = (x) => {setOpenSidebar(x)}
+   
     return (
         <>
-         <Navbar setOpenSidebarFun= {setOpenSidebarFun} />
-    <Sidebar openSidebar= {openSidebar} setOpenSidebarFun= {setOpenSidebarFun}/>
+            <Navbar />
+            <Sidebar />
             <Homeslider />
             <Homeinfo />
             <OurHistory />

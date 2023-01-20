@@ -4,22 +4,31 @@ import {faTimes ,faHouse, faBookOpen, faFile, faUser, faGear} from '@fortawesome
 import {faEnvira} from '@fortawesome/free-brands-svg-icons'
 import Logo from '../newBrainsLogo/Logo';
 import {Link} from 'react-router-dom';
-const Sidebar = ({setOpenSidebarFun, openSidebar}) => {
+import { useDispatch, useSelector } from 'react-redux';
+import {setOpenSidebar} from '../../store/sidebarRouteSlice';
 
+
+const Sidebar = () => {
+
+    const dispatch = useDispatch();
+    const {openSidebar} = useSelector (state => state.sidebarSlice);
+    
     return (
         <div style={{left : openSidebar ? '0' : '-300px'}}
          className='sidebar'
         >
             <div className='d-flex justify-content-end'>
-            <FontAwesomeIcon onClick={() => setOpenSidebarFun(false)} icon={faTimes} className='fs-4' style={{cursor:'pointer'}}/> 
+            <FontAwesomeIcon onClick={() =>dispatch(setOpenSidebar(false))} icon={faTimes} className='fs-4' style={{cursor:'pointer'}}/> 
             </div>
             <Logo />
             <ul className='list-unstyled mt-4'>
+                <Link to ='/' className='nav-link'>
                 <li>
                    <FontAwesomeIcon icon={faHouse} className='me-3'
                    /> 
                    <span>Home</span>
                 </li>
+                </Link>
                 <Link to ='/teachers' className='nav-link'>
                 <li>
                    <FontAwesomeIcon icon={faEnvira} className='me-3'
@@ -34,9 +43,11 @@ const Sidebar = ({setOpenSidebarFun, openSidebar}) => {
                    <span>Subjects</span>
                 </li>
                 <li>
+                   <Link to ='/test' className='nav-link'>
                    <FontAwesomeIcon icon={faFile} className='me-3'
                    /> 
                    <span>Test</span>
+                   </Link>
                 </li>
                 <li>
                    <FontAwesomeIcon icon={faUser} className='me-3'
@@ -54,9 +65,11 @@ const Sidebar = ({setOpenSidebarFun, openSidebar}) => {
                 <img className='rocket' src='./imgs/rocket0.png' alt='rocket'/>
             </div>
             <div className='sett-btn'>
+                <Link to ='/setting' className='nav-link'>
                    <FontAwesomeIcon icon={faGear} className='me-3'
                    /> 
                    <span>Setting</span>
+                </Link>
             </div>
         </div>
     )

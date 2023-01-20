@@ -1,0 +1,43 @@
+@import '../../../sass/variables.scss';
+.login-draw {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: $blueColor;
+    overflow: hidden;
+   img {
+        position: absolute;
+   }
+   .left-wave {
+        left: 110px;
+        top: 142px;
+        transform: scale(2);
+   }
+   .bottom-right-wave {
+        left: 344px;
+        top: 290px;
+        transform: scale(2.2);
+   }
+   .top-right-wave {
+        top: 20px;
+        right: 60px;
+   }
+   .blood-report {
+        transform: scale(.9);
+        left: -15px;
+        top: 150px;
+        z-index: 3;
+   }
+   .online-study {
+        transform: scale(.7);
+        top: 250px;
+        left: 50px;
+   }
+   .school-bag {
+        transform: scale(.8);
+        left: 220px;
+        top: 70px;
+   }
+
+}
