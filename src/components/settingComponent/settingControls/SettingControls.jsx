@@ -6,15 +6,15 @@ const SettingControls = () => {
         <section className='setting-controls mt-5 m-auto'>
             <Container>
                 <Row>
-                    <Col  md = {6} className='col-9'>
-                        <div>
+                    <Col sm={9}  md = {6} className='col-9'>
+                        <div className=''>
                             <button className='per-info'>Personal Information</button>
                             <button className='pass'>Password</button>
                         </div>
                     </Col>
-                    <Col  md= {6} className='col-3'>
-                        <div>
-                            <button className='log-out m-auto d-block'>Log Out</button>
+                    <Col  sm={3} md= {6} className='col-4 mt-2 mt-sm-0 m-auto'>
+                        <div className=''>
+                            <button className='log-out m-sm-auto d-block'>Log Out</button>
                         </div>
                     </Col>            
                 </Row>
