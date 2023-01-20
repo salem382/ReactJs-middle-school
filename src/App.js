@@ -6,11 +6,31 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Teachers from './pages/teachers/Teachers';
 import Test from './pages/test/Test';
 import Setting from './pages/setting/Setting';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import {setOpenSidebar} from './store/sidebarRouteSlice'
 
 function App() {
- 
+
+    const dispatch = useDispatch();
+    const {openSidebar} = useSelector (state => state.sidebarSlice);
+    const [screenSize, getDimension] = useState({
+      dynamicWidth: window.innerWidth
+    });
+    const setDimension = () => {
+      getDimension({
+        dynamicWidth: window.innerWidth
+      })
+    }
+    useEffect(() => {
+      window.addEventListener('resize', setDimension);
+      screenSize.dynamicWidth <= 992 ? dispatch(setOpenSidebar(false)) : dispatch(setOpenSidebar(true));
+      return(() => {
+          window.removeEventListener('resize', setDimension);
+      })
+    }, [screenSize])
   return (
-    <>
+    <section>
       <BrowserRouter>
           <Routes>
               <Route path='/' element={<Home />}/>
@@ -21,7 +41,7 @@ function App() {
               <Route path='/setting' element={<Setting />}/>
           </Routes>
       </BrowserRouter>
-    </>
+    </section>
   );
 }
 

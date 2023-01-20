@@ -7,21 +7,24 @@ import Teachersearch from '../../components/teachersComponent/teacherSearch/Teac
 import Teacherpersons from '../../components/teachersComponent/teacherPersons/TeacherPerson';
 import Contact from '../../components/contact/Contact';
 import Footer from '../../components/footer/Footer';
+import { useSelector } from 'react-redux';
 
 const Teachers = () => {
 
+    const {openSidebar, sidebarWidth} = useSelector(state => state.sidebarSlice);
     
-    const [openSidebar, setOpenSidebar] = useState(false);
-    const setOpenSidebarFun = (x) => {setOpenSidebar(x)}
     return (
         <>
-            <Navbar setOpenSidebarFun= {setOpenSidebarFun} />
-            <Sidebar openSidebar= {openSidebar} setOpenSidebarFun= {setOpenSidebarFun}/>
+            <Sidebar/>
+            <div style={{paddingLeft:openSidebar ?sidebarWidth : '0' ,
+                transition:'all .3s ease-in-out'}}>
+            <Navbar/>
             <Teacherslider/>
             <Teachersearch />
             <Teacherpersons />
             <Contact />
             <Footer/>
+            </div>
         </>
     )
 }

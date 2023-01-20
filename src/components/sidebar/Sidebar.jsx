@@ -1,25 +1,37 @@
 import './sidebar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faTimes ,faHouse, faBookOpen, faFile, faUser, faGear} from '@fortawesome/free-solid-svg-icons';
+import {faHouse, faBookOpen, faFile, faUser, faGear} from '@fortawesome/free-solid-svg-icons';
 import {faEnvira} from '@fortawesome/free-brands-svg-icons'
 import Logo from '../newBrainsLogo/Logo';
 import {Link} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {setOpenSidebar} from '../../store/sidebarRouteSlice';
-
+import { useState, useEffect } from 'react';
 
 const Sidebar = () => {
 
     const dispatch = useDispatch();
     const {openSidebar} = useSelector (state => state.sidebarSlice);
-    
+    const [screenSize, getDimension] = useState({
+        dynamicWidth: window.innerWidth
+      });
+      const setDimension = () => {
+        getDimension({
+          dynamicWidth: window.innerWidth
+        })
+      }
+      useEffect(() => {
+        window.addEventListener('resize', setDimension);
+        screenSize.dynamicWidth <= 992 ? dispatch(setOpenSidebar(false)) : dispatch(setOpenSidebar(true));
+        return(() => {
+            window.removeEventListener('resize', setDimension);
+        })
+      }, [screenSize])
+
     return (
         <div style={{left : openSidebar ? '0' : '-300px'}}
          className='sidebar'
         >
-            <div className='d-flex justify-content-end'>
-            <FontAwesomeIcon onClick={() =>dispatch(setOpenSidebar(false))} icon={faTimes} className='fs-4' style={{cursor:'pointer'}}/> 
-            </div>
             <Logo />
             <ul className='list-unstyled mt-4'>
                 <Link to ='/' className='nav-link'>
