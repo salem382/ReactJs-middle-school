@@ -1,6 +1,6 @@
 import './sidebar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faHouse, faBookOpen, faFile, faUser, faGear} from '@fortawesome/free-solid-svg-icons';
+import {faHouse, faBookOpen, faFile, faUser, faGear, faBars} from '@fortawesome/free-solid-svg-icons';
 import {faEnvira} from '@fortawesome/free-brands-svg-icons'
 import Logo from '../newBrainsLogo/Logo';
 import {Link} from 'react-router-dom';
@@ -32,6 +32,11 @@ const Sidebar = () => {
         <div style={{left : openSidebar ? '0' : '-300px'}}
          className='sidebar'
         >
+            <div className='position-absolute '
+            style={{right:'-20px', top:'17px'}}
+            >
+                <FontAwesomeIcon style={{cursor:'pointer'}} onClick={() => dispatch(setOpenSidebar(!openSidebar))}  className='fs-5 icon' icon={faBars}/>
+            </div>
             <Logo />
             <ul className='list-unstyled mt-4'>
                 <Link to ='/' className='nav-link'>

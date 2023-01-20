@@ -2,7 +2,8 @@ import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
     openSidebar : true,
-    sidebarWidth : '300px'
+    sidebarWidth : '300px',
+    screeSize : 1220
 }
 
 const sidebarSlice = createSlice({
@@ -12,9 +13,12 @@ const sidebarSlice = createSlice({
        
         setOpenSidebar :(state, action) => {
             state.openSidebar = action.payload;
-        } 
+        } ,
+        setScreenSize : (state, action) => {
+            state.screeSize = action.payload;
+        }
     }
 })
 
 export default sidebarSlice.reducer;
-export const {setOpenSidebar} = sidebarSlice.actions;
+export const {setOpenSidebar, setScreenSize} = sidebarSlice.actions;

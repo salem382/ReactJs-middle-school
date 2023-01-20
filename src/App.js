@@ -8,7 +8,7 @@ import Test from './pages/test/Test';
 import Setting from './pages/setting/Setting';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
-import {setOpenSidebar} from './store/sidebarRouteSlice'
+import {setOpenSidebar, setScreenSize} from './store/sidebarRouteSlice'
 
 function App() {
 
@@ -25,6 +25,7 @@ function App() {
     useEffect(() => {
       window.addEventListener('resize', setDimension);
       screenSize.dynamicWidth <= 992 ? dispatch(setOpenSidebar(false)) : dispatch(setOpenSidebar(true));
+      dispatch(setScreenSize(screenSize.dynamicWidth));
       return(() => {
           window.removeEventListener('resize', setDimension);
       })

@@ -4,12 +4,12 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import { useSelector } from "react-redux";
 const Setting = () => {
 
-    const {openSidebar, sidebarWidth} = useSelector(state => state.sidebarSlice);
+    const {openSidebar, sidebarWidth, screeSize} = useSelector(state => state.sidebarSlice);
 
     return (
         <div>
             <Sidebar />
-            <div style={{paddingLeft:openSidebar ?sidebarWidth : '0' ,
+            <div style={{paddingLeft:openSidebar && screeSize > 772 ?sidebarWidth : '0' ,
                 transition:'all .3s ease-in-out'}}>
                 <Navbar />
                 <SettingControls />
