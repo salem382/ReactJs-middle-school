@@ -16,9 +16,9 @@ const SignUpForm = () => {
            <form>
                 <input placeholder='Full Name' type='text' />
                 <input placeholder='Email Adress' type='email' />
-                <div className='position-relative'>
-                    <input  placeholder='Password' type={showPass ? 'text' : 'password'} />
-                    <FontAwesomeIcon onMouseUp={() =>setShowPass(false)} onMouseDown={() =>setShowPass(true)} className='position-absolute' style={{color:'#c1c1c1', right:"100px", top:'10px', cursor:'pointer'}} icon={faEye}/>
+                <div className='position-relative m-auto w-75' >
+                    <input className='w-100' placeholder='Password' type={showPass ? 'text' : 'password'} />
+                    <FontAwesomeIcon onMouseUp={() =>setShowPass(false)} onMouseDown={() =>setShowPass(true)} className='position-absolute' style={{color:'#c1c1c1', right:"0", top:'10px', cursor:'pointer'}} icon={faEye}/>
                 </div>
                 <input placeholder='Age' type='number' />
     
