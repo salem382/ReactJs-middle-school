@@ -1,4 +1,49 @@
-.home-slider {
-    background-color: #080;    
-   
+@import '../../../sass/variables.scss';
+@import '../../../sass/mixin.scss';
+.banner {
+  padding: 5.8em 0px 8.8em 5.5em;
+  box-shadow: 0px 14px 0px -7px #00c8d5;
+  border-radius: 32px;
+  max-width: 1024px;
+  margin-left: 47px;
+  font-size: 10px;
+  &__header--l1 {
+    font-size: 6.4em;
+    color: $purpleColor;
+  }
+  &__header--l2 {
+    font-size: 6.4em;
+    color: $orangeColor;
+    margin-bottom: 20px;
+  }
+  &__para {
+    font-size: 2em;
+    color: $greyColor2;
+    margin-bottom: 2em;
+  }
+  .btn-solid {
+    @include blue-btn(189px, $blueColor);
+    border-radius: 32px;
+    font-size: 2.4em;
+    font-weight: 600;
+    margin-right: 1.9em;
+    @media only screen and (max-width: 980px) {
+      margin-bottom: 1em;
+    }
+  }
+  .btn-outline {
+    @include blue-btn(189px, #fff);
+    border-radius: 32px;
+    font-size: 2.4em;
+    color: $blueColor;
+    font-weight: 600;
+    box-shadow: none;
+    border: 2px solid $blueColor;
+  }
+  @media only screen and (max-width: 980px) {
+    font-size: 9px;
+  }
+  @media only screen and (max-width: 450px) {
+    font-size: 8px;
+  }
 }
