@@ -3,7 +3,7 @@ import './logo.scss';
 const Logo = ({src, name}) => {
 
   return (
-    <div>
+    <div className='pt-3'>
       <img src={src} alt={name}/>
     </div>
   );

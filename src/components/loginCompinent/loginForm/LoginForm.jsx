@@ -7,6 +7,7 @@ const LoginForm = () => {
     return (
         <div className='loginform'>
             <TopPartSignup />
+            <br/>
             <SocialSign  head = "Welcome Back"/>
              <form>
                 <input placeholder='Full Name' type='text' />

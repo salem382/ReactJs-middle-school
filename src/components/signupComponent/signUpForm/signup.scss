@@ -17,12 +17,16 @@
         ::placeholder {
             color: #C1C1C1;
         }
-        input {
+        input, 
+        select {
             border: none;
             border-bottom: 1px solid #C1C1C1;
             width: 75%;
             outline: none;
             margin: 10px 0;
+        }
+        select {
+            color: #C1C1C1;
         }
     }
     @media (max-width:992px) {
@@ -50,6 +54,6 @@
             cursor: pointer;
 
         }
-        padding-bottom: 30px;
+       
     }
 }
