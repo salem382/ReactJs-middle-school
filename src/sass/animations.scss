@@ -14,3 +14,17 @@
     transform: rotate(360deg) translate(-5px) rotate(-360deg);
   }
 }
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(-10px);
+  }
+  70% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
