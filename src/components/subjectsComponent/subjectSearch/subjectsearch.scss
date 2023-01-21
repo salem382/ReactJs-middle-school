@@ -1,0 +1,42 @@
+@import '../../../sass/variables.scss';
+@import '../../../sass/mixin.scss';
+
+.search {
+  margin: 48px auto 48px 47px;
+  display: grid;
+  grid-template-columns: min-content min-content min-content 67%;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  .filter-btn {
+    @include blue-btn(160px, #ecebe9);
+    color: #6a655c;
+    font-weight: 900;
+    font-size: 16px;
+    box-shadow: none;
+    &.active {
+      background-color: $blueColor;
+      color: #fff;
+    }
+  }
+  .filter-icon {
+    cursor: pointer;
+  }
+  .search-input {
+    position: relative;
+    input {
+      width: 80%;
+      background: #eaeaea;
+      border-radius: 100px;
+      outline: none;
+      border: none;
+      padding: 8px;
+      padding-left: 70px;
+    }
+    img {
+      position: absolute;
+      left: 24px;
+      top: 10px;
+    }
+  }
+}
