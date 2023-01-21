@@ -9,26 +9,30 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import './home.scss';
 import { useSelector } from 'react-redux';
 
-
 const Home = () => {
+  const { openSidebar, sidebarWidth, screeSize } = useSelector(
+    (state) => state.sidebarSlice
+  );
 
-    const {openSidebar, sidebarWidth, screeSize} = useSelector(state => state.sidebarSlice);
-
-    return (
-        <>
-            <Sidebar />
-            <div style={{paddingLeft:openSidebar&& screeSize > 772 ?sidebarWidth : '0' ,
-                transition:'all .3s ease-in-out'}}>
-                <Navbar />
-                <Homeslider />
-                <Homeinfo />
-                <OurHistory />
-                <StartConversion />
-                <Contact />
-                <Footer />  
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <Sidebar />
+      <div
+        style={{
+          paddingLeft: openSidebar && screeSize > 772 ? sidebarWidth : '0',
+          transition: 'all .3s ease-in-out',
+        }}
+      >
+        <Navbar />
+        <Homeslider />
+        <Homeinfo />
+        <OurHistory />
+        <StartConversion />
+        <Contact />
+        <Footer />
+      </div>
+    </>
+  );
+};
 
 export default Home;

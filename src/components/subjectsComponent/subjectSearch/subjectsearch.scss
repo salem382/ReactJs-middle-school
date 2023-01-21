@@ -4,14 +4,20 @@
 .search {
   margin: 48px auto 48px 47px;
   display: grid;
-  grid-template-columns: min-content min-content 67%;
+  grid-template-columns: min-content min-content min-content 67%;
   justify-content: center;
   align-items: center;
   gap: 12px;
   .filter-btn {
-    @include blue-btn(160px, $blueColor);
+    @include blue-btn(160px, #ecebe9);
+    color: #6a655c;
     font-weight: 900;
     font-size: 16px;
+    box-shadow: none;
+    &.active {
+      background-color: $blueColor;
+      color: #fff;
+    }
   }
   .filter-icon {
     cursor: pointer;

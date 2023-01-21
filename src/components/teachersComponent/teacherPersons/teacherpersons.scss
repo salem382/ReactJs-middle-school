@@ -1,0 +1,45 @@
+@import '../../../sass/mixin.scss';
+@import '../../../sass/variables.scss';
+
+.teachers {
+  margin-left: 47px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 22px;
+  row-gap: 32px;
+  .teacher {
+    background-color: #f1f1f1;
+    border-radius: 16px;
+    padding: 7.5px;
+  }
+  .name {
+    font-weight: 700;
+    font-size: 16px;
+    color: #434d57;
+    margin-top: 10px;
+  }
+  .title {
+    font-weight: 600;
+    font-size: 13px;
+    color: #434d57;
+  }
+  .school {
+    font-weight: 500;
+    font-size: 12px;
+    color: #434d57;
+    display: inline-block;
+  }
+  .action {
+    background-color: $blueColor;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 4px;
+    margin-left: 72px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+}

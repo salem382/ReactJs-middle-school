@@ -1,0 +1,83 @@
+@import '../../../sass/animations.scss';
+.history {
+  margin-left: 47px;
+  background: rgba(229, 238, 244, 0.3);
+  border-radius: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 35px;
+  @media only screen and (max-width: 925px) {
+    justify-content: flex-start;
+  }
+  .content {
+    max-width: 451px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background-color: #fff2b7;
+      position: absolute;
+      top: 0%;
+      left: -4%;
+      animation: circleRotate 5s infinite linear forwards reverse;
+    }
+
+    .header {
+      font-weight: 600;
+      font-size: 40px;
+      color: #2f2f2f;
+      position: relative;
+      z-index: 2;
+    }
+    .para {
+      font-weight: 500;
+      font-size: 20px;
+      color: #2f2f2f;
+    }
+  }
+  .video {
+    position: relative;
+    img {
+      display: block;
+      position: relative;
+      width: 100%;
+      z-index: 3;
+    }
+    .play-icon {
+      position: absolute;
+      top: 31%;
+      left: 24%;
+      width: 160px;
+      cursor: pointer;
+      z-index: 3;
+    }
+    &::before {
+      content: '';
+      width: 60px;
+      height: 62px;
+      border-radius: 20px;
+      background-color: #80e3ea;
+      position: absolute;
+      top: -3%;
+      left: -3%;
+      z-index: 1;
+      animation: squareRotate 5s infinite linear forwards reverse;
+    }
+    &::after {
+      content: '';
+      width: 100px;
+      height: 105px;
+      border-radius: 20px;
+      background-color: #ffb954;
+      position: absolute;
+      bottom: -3%;
+      right: -3%;
+      z-index: 1;
+      animation: squareRotate 5s infinite linear forwards reverse;
+    }
+  }
+}
