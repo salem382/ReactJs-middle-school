@@ -1,21 +1,25 @@
 import Navbar from "../../components/navbar/Navbar";
 import SettingControls from "../../components/settingComponent/settingControls/SettingControls";
 import Sidebar from "../../components/sidebar/Sidebar";
-import { useSelector } from "react-redux";
+import Settinginfo from "../../components/settingComponent/settingInfo/Settinginfo";
+import SettingSendData from "../../components/settingComponent/settingSendData/SettingSendData";
+import Wrapper from "../../components/wrapper/Wrapper";
+import React from "react";
+
 const Setting = () => {
 
-    const {openSidebar, sidebarWidth, screeSize} = useSelector(state => state.sidebarSlice);
-
+   
     return (
-        <div>
+        <div className="ps-5">
             <Sidebar />
-            <div style={{paddingLeft:openSidebar && screeSize > 772 ?sidebarWidth : '0' ,
-                transition:'all .3s ease-in-out'}}>
+            <Wrapper>
                 <Navbar />
                 <SettingControls />
-            </div>
+                <Settinginfo /> 
+                <SettingSendData />
+            </Wrapper>            
         </div>
     )
 }
 
-export default Setting;
+export default React.memo(Setting);

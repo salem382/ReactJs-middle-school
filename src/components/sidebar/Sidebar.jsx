@@ -7,34 +7,18 @@ import {
   faUser,
   faGear,
   faBars,
+  faTimes
 } from '@fortawesome/free-solid-svg-icons';
 import { faEnvira } from '@fortawesome/free-brands-svg-icons';
 import Logo from '../newBrainsLogo/Logo';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setOpenSidebar } from '../../store/sidebarRouteSlice';
-import { useState, useEffect } from 'react';
+
 
 const Sidebar = () => {
   const dispatch = useDispatch();
-  const { openSidebar } = useSelector((state) => state.sidebarSlice);
-  const [screenSize, getDimension] = useState({
-    dynamicWidth: window.innerWidth,
-  });
-  const setDimension = () => {
-    getDimension({
-      dynamicWidth: window.innerWidth,
-    });
-  };
-  useEffect(() => {
-    window.addEventListener('resize', setDimension);
-    screenSize.dynamicWidth <= 992
-      ? dispatch(setOpenSidebar(false))
-      : dispatch(setOpenSidebar(true));
-    return () => {
-      window.removeEventListener('resize', setDimension);
-    };
-  }, [screenSize]);
+  const { openSidebar, screeSize } = useSelector((state) => state.sidebarSlice);
 
   return (
     <div style={{ left: openSidebar ? '0' : '-300px' }} className='sidebar'>
@@ -43,39 +27,50 @@ const Sidebar = () => {
         style={{ right: '-35px', top: '17px' }}
       >
         <FontAwesomeIcon
-          style={{ cursor: 'pointer' }}
+          style={{display:openSidebar && screeSize <= 576 ? 'none' : 'block', cursor: 'pointer' }}
           onClick={() => dispatch(setOpenSidebar(!openSidebar))}
           className='fs-5 icon'
           icon={faBars}
         />
       </div>
-      <Logo />
+      <div className='mb-4 d-flex justify-content-end pe-2'>
+        <FontAwesomeIcon 
+         onClick={() => dispatch(setOpenSidebar(false))}
+         style={{display:openSidebar && screeSize <= 576 ? 'block' : 'none',cursor:'pointer'}} 
+         className='fs-4' 
+        icon={faTimes}/>
+      </div>
+      <Logo src={'/imgs/sidebar/logo.png'} name = 'logo' />
       <ul className='list-unstyled mt-4'>
-        <Link to='/' className='nav-link'>
+        <NavLink 
+        className={'nav-link'}
+        to='/'
+        >
           <li>
             <FontAwesomeIcon icon={faHouse} className='me-3' />
             <span>Home</span>
           </li>
-        </Link>
-        <Link to='/teachers' className='nav-link'>
+        </NavLink>
+        <NavLink to='/teachers'
+        className={'nav-link'}
+        >
           <li>
             <FontAwesomeIcon icon={faEnvira} className='me-3' />
             <span>Teachers</span>
           </li>
-        </Link>
-        <Link to='/subjects' className='nav-link'>
+        </NavLink>
+        <NavLink to='/subjects' className='nav-link'>
           <li>
             <FontAwesomeIcon icon={faBookOpen} className='me-3' />
             <span>Subjects</span>
           </li>
-        </Link>
-
+        </NavLink>
+        <NavLink to='/test' className='nav-link'>
         <li>
-          <Link to='/test' className='nav-link'>
             <FontAwesomeIcon icon={faFile} className='me-3' />
             <span>Test</span>
-          </Link>
         </li>
+        </NavLink>
         <li>
           <FontAwesomeIcon icon={faUser} className='me-3' />
           <span>Account</span>
@@ -88,13 +83,13 @@ const Sidebar = () => {
           features for free.
         </p>
         <div className='try-btn'>TRY NOW</div>
-        <img className='rocket' src='./imgs/rocket0.png' alt='rocket' />
+        <img className='rocket' src='/imgs/sidebar/rocket0.png' alt='rocket' />
       </div>
       <div className='sett-btn'>
-        <Link to='/setting' className='nav-link'>
+        <NavLink to='/setting' className='nav-link'>
           <FontAwesomeIcon icon={faGear} className='me-3' />
           <span>Setting</span>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

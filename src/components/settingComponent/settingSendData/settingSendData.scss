@@ -1,0 +1,15 @@
+@import '../../../sass/mixin.scss';
+
+.btns-setting-send-data {
+    width: 80%;
+    .cancel {
+        @include blue-btn (90px, #fff);
+        color:#1989DC;
+        box-shadow: none;
+        border-color: #1989DC;
+    }
+    .save {
+        @include blue-btn (90px, #1989DC);
+        box-shadow: none;
+    }
+}

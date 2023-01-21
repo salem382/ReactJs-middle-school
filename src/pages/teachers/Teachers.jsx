@@ -1,5 +1,3 @@
-import './teachers.scss';
-import { useState } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Teacherslider from '../../components/teachersComponent/teacherslider/Teacherslider';
@@ -7,26 +5,24 @@ import Teachersearch from '../../components/teachersComponent/teacherSearch/Teac
 import Teacherpersons from '../../components/teachersComponent/teacherPersons/TeacherPerson';
 import Contact from '../../components/contact/Contact';
 import Footer from '../../components/footer/Footer';
-import { useSelector } from 'react-redux';
+import Wrapper from '../../components/wrapper/Wrapper';
+import React from 'react';
 
 const Teachers = () => {
 
-    const {openSidebar, sidebarWidth, screeSize} = useSelector(state => state.sidebarSlice);
-    
     return (
         <>
             <Sidebar/>
-            <div style={{paddingLeft:openSidebar && screeSize > 772 ?sidebarWidth : '0' ,
-                transition:'all .3s ease-in-out'}}>
-            <Navbar/>
-            <Teacherslider/>
-            <Teachersearch />
-            <Teacherpersons />
-            <Contact />
-            <Footer/>
-            </div>
+            <Wrapper>
+                <Navbar/>
+                <Teacherslider/>
+                <Teachersearch />
+                <Teacherpersons />
+                <Contact />
+                <Footer/>
+            </Wrapper>
         </>
     )
 }
 
-export default Teachers;
+export default React.memo(Teachers);

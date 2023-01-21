@@ -1,5 +1,6 @@
 import LoginDraw from "../../components/loginCompinent/loginDraw/LoginDraw";
 import LoginForm from "../../components/loginCompinent/loginForm/LoginForm";
+import React from "react";
 
 const Login = () => {
 
@@ -12,4 +13,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default React.memo(Login);

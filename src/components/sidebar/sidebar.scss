@@ -13,7 +13,7 @@
     @include text-style;
     padding: 12px;
     &:hover {
-      @include blue-btn(80%, $blueColor);
+     @include blue-btn(80%, $blueColor);
     }
   }
   .pro {
@@ -56,4 +56,5 @@
       @include blue-btn(80%, $blueColor);
     }
   }
+
 }

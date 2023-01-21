@@ -7,13 +7,17 @@ import Teachers from './pages/teachers/Teachers';
 import Subjects from './pages/subjects/Subjects';
 import Test from './pages/test/Test';
 import Setting from './pages/setting/Setting';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { setOpenSidebar, setScreenSize } from './store/sidebarRouteSlice';
+import SettingP2 from './pages/setting/SettingP2';
+
+
 
 function App() {
+
+  /* get screen size */
   const dispatch = useDispatch();
-  const { openSidebar } = useSelector((state) => state.sidebarSlice);
   const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
   });
@@ -32,6 +36,9 @@ function App() {
       window.removeEventListener('resize', setDimension);
     };
   }, [screenSize]);
+  /*******************************************************/
+
+
   return (
     <section>
       <BrowserRouter>
@@ -42,7 +49,10 @@ function App() {
           <Route path='/teachers' element={<Teachers />} />
           <Route path='/subjects' element={<Subjects />} />
           <Route path='/test' element={<Test />} />
-          <Route path='/setting' element={<Setting />} />
+          <Route path='/setting'>
+              <Route index element = {<Setting />}/>
+              <Route path='pass' element = {<SettingP2 />} />  
+          </Route>
         </Routes>
       </BrowserRouter>
     </section>

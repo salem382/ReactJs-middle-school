@@ -1,23 +1,21 @@
 import Navbar from "../../components/navbar/Navbar";
 import Quiz from "../../components/quiz/Quiz";
 import Sidebar from "../../components/sidebar/Sidebar";
-import { useSelector } from 'react-redux';
-
+import Wrapper from "../../components/wrapper/Wrapper";
+import React from "react";
 
 const Test = () => {
 
-    const {openSidebar, sidebarWidth, screeSize} = useSelector(state => state.sidebarSlice);
 
     return (
         <div>
             <Sidebar />
-            <div style={{paddingLeft:openSidebar&& screeSize > 772 ?sidebarWidth : '0' ,
-                transition:'all .3s ease-in-out'}}>
+            <Wrapper>
                 <Navbar/>
                 <Quiz />
-            </div>
+            </Wrapper>
         </div>
     )
 }
 
-export default Test;
+export default React.memo(Test);

@@ -1,0 +1,66 @@
+@import '../../../sass/variables.scss';
+@import '../../../sass/mixin.scss';
+
+.setting-info {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 15px;
+    form {
+        input {
+            border: 1.5px solid #E4EBE4;
+            border-radius: 8px;
+            padding: 7px;
+            width: 80%;
+            margin-bottom: 15px;
+            &::placeholder {
+                color: #5E6D55;
+            }
+            @media (max-width:772px) {
+                width: 100%;
+            }
+            
+        }
+        .setting-name {
+            display: flex;
+            flex-wrap: wrap;
+            input {
+                width: 38%;
+                &:first-child {
+                    @media (min-width:773px) {
+                        margin-right: 4%;
+                    }
+                }
+                @media (max-width:772px) {
+                    width: 100%;
+                    &:first-child {
+                        margin-bottom: 15px;
+                    }
+                } 
+                outline: none;            
+            }
+        }
+        .setting-phone {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            @media (max-width:772px) {
+                width: 100%;
+            }
+            input {
+                width: 60%;  
+            }
+            button {
+                background: #15BE4F;
+                border-radius:50px;
+                height: 45px;
+                color: #fff;
+                border: none;
+                padding: 0 10px;
+                cursor: pointer;
+            }
+        } 
+    }
+    @media (max-width:772px) {
+        width: 80%;
+    }
+}

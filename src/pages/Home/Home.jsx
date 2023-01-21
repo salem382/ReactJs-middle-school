@@ -6,23 +6,15 @@ import OurHistory from '../../components/homeComponents/ourHistory/Ourhistory';
 import StartConversion from '../../components/homeComponents/startConversition/StartConversion';
 import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
-import './home.scss';
-import { useSelector } from 'react-redux';
+import Wrapper from '../../components/wrapper/Wrapper';
+import React from 'react';
 
 const Home = () => {
-  const { openSidebar, sidebarWidth, screeSize } = useSelector(
-    (state) => state.sidebarSlice
-  );
 
   return (
     <>
       <Sidebar />
-      <div
-        style={{
-          paddingLeft: openSidebar && screeSize > 772 ? sidebarWidth : '0',
-          transition: 'all .3s ease-in-out',
-        }}
-      >
+      <Wrapper>
         <Navbar />
         <Homeslider />
         <Homeinfo />
@@ -30,9 +22,9 @@ const Home = () => {
         <StartConversion />
         <Contact />
         <Footer />
-      </div>
+      </Wrapper>
     </>
   );
 };
 
-export default Home;
+export default React.memo(Home);
