@@ -8,11 +8,11 @@ const TopPartSignup = () => {
         <div className='top-part  px-5 d-flex justify-content-between'>
             <Logo src="./imgs/sign/gp.png" name="logo"/>
             <div className='position-relative pt-3'>
-                <select className='select' name="lang" id="lang">
-                    <option value="volvo">English(IN)</option>
-                    <option value="saab">Arabic(AR)</option>
+                <select className='select mt-1' name="lang" id="lang">
+                    <option value="english">English(IN)</option>
+                    <option value="arabic">Arabic(AR)</option>
                 </select>
-                <FontAwesomeIcon icon={faCaretDown} className="fs-5 icon position-absolute"/>
+                <FontAwesomeIcon icon={faCaretDown} className="fs-5 mt-1 icon position-absolute"/>
             </div>
         </div>
     )

@@ -26,7 +26,7 @@ const Settinginfo = () => {
                                 <input placeholder='Password' type='password'/>
                             </div>
                             <div className='setting-phone'>
-                                <input placeholder='phone' type='number'/>
+                                <input placeholder='phone' className='me-1 me-md-0' type='number'/>
                                 <button>VERFIED</button>
                             </div>
                             <div>

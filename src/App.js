@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { setOpenSidebar, setScreenSize } from './store/sidebarRouteSlice';
 import SettingP2 from './pages/setting/SettingP2';
+import Account from './pages/account/Account';
 
 
 
@@ -53,6 +54,7 @@ function App() {
               <Route index element = {<Setting />}/>
               <Route path='pass' element = {<SettingP2 />} />  
           </Route>
+          <Route path='/account' element={<Account />} />
         </Routes>
       </BrowserRouter>
     </section>

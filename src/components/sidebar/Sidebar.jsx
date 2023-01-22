@@ -55,15 +55,20 @@ const Sidebar = () => {
             </li>
           </NavLink>
           <NavLink to='/test' className='nav-link'>
-          <li>
-              <FontAwesomeIcon icon={faFile} className='me-3' />
-              <span>Test</span>
-          </li>
+            <li>
+                <FontAwesomeIcon icon={faFile} className='me-3' />
+                <span>Test</span>
+            </li>
           </NavLink>
-          <li>
-            <FontAwesomeIcon icon={faUser} className='me-3' />
-            <span>Account</span>
-          </li>
+          <NavLink 
+          className={'nav-link'}
+          to='/account'
+          >
+            <li>
+              <FontAwesomeIcon icon={faUser} className='me-3' />
+              <span>Account</span>
+            </li>
+          </NavLink>
         </ul>
         <div className='pro' style={{ marginLeft: '12px' }}>
           <h5>Upgrade to pro</h5>
