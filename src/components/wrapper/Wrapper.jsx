@@ -9,7 +9,7 @@ const Wrapper = ({children}) => {
 
     return (
         <div  style={{
-            paddingLeft: openSidebar && screeSize > 772 ? sidebarWidth : '0',
+            paddingLeft: openSidebar && screeSize > 992 ? sidebarWidth : '0',
             transition: 'all .3s ease-in-out'
           }}>
             {children}

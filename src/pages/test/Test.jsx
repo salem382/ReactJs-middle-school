@@ -10,8 +10,8 @@ const Test = () => {
     return (
         <div>
             <Sidebar />
+            <Navbar/>
             <Wrapper>
-                <Navbar/>
                 <Quiz />
             </Wrapper>
         </div>

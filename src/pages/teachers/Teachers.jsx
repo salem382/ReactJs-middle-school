@@ -13,8 +13,8 @@ const Teachers = () => {
     return (
         <>
             <Sidebar/>
+            <Navbar/>
             <Wrapper>
-                <Navbar/>
                 <Teacherslider/>
                 <Teachersearch />
                 <Teacherpersons />

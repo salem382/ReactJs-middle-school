@@ -10,10 +10,10 @@ const Setting = () => {
 
    
     return (
-        <div className="ps-5">
+        <div>
             <Sidebar />
+            <Navbar />
             <Wrapper>
-                <Navbar />
                 <SettingControls />
                 <Settinginfo /> 
                 <SettingSendData />

@@ -6,13 +6,14 @@ import { Container } from "react-bootstrap";
 import SettingSendData from "../settingSendData/SettingSendData";
 import Wrapper from "../../wrapper/Wrapper";
 
+
 const Settingpass = () => {
 
     return (
         <div className="ps-5 setting-pass">
             <Sidebar />
+            <Navbar />
             <Wrapper>
-                <Navbar />
                 <SettingControls />
                 <Container>
                     <form className="mt-5 ">

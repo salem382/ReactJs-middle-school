@@ -14,8 +14,8 @@ const Home = () => {
   return (
     <>
       <Sidebar />
+      <Navbar />
       <Wrapper>
-        <Navbar />
         <Homeslider />
         <Homeinfo />
         <OurHistory />

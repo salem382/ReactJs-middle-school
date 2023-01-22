@@ -12,8 +12,8 @@ const Subjects = () => {
   return (
     <>
       <Sidebar />
+      <Navbar />
       <Wrapper>
-        <Navbar />
         <SubjectHero />
         <Subjectsearch />
         <StudyMaterial />
