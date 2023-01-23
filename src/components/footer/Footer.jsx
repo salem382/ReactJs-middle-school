@@ -8,11 +8,11 @@ const Footer = () => {
 
     return (
        
-            <div className='py-2'
+            <div className='py-2 footer'
                 style={{background:'#EAEAEA'}}
             >
             <Container>
-                <div className='w-50 w-sm-25 ms-auto d-flex justify-content-between'>
+                <div className='footer-icon ms-auto d-flex justify-content-between'>
                         <img src='/imgs/footer/facebook.png'/>
                         <img src='/imgs/footer/linkedin.png'/>
                         <img src='/imgs/footer/gmail.png'/>
