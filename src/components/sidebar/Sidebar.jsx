@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHouse,
   faBookOpen,
-  faFile,
   faUser,
   faGear,
 } from '@fortawesome/free-solid-svg-icons';
@@ -28,47 +27,73 @@ const Sidebar = () => {
       onClick = {() =>dispatch(setOpenSidebar(false))}
       ></section>
       <div style={{ left: openSidebar ? '0' : '-300px' }} className='sidebar'>
-
-        <Logo src={'/imgs/sidebar/logo.png'} name = 'logo' />
+        <div className='w-75'>
+          <Logo src={'/imgs/sidebar/logo.png'} name = 'logo' />
+        </div>
         <ul className='list-unstyled mt-4'>
-          <NavLink 
-          className={'nav-link'}
-          to='/'
-          >
-            <li>
+          <li>
+            <NavLink 
+            style={{
+              textDecoration:"none",
+              padding: "12px 60px 12px 12px",
+              }}
+              className={({ isActive }) =>
+              isActive ? "active-item" : "unactive-item "
+            }
+            to='/'>
               <FontAwesomeIcon icon={faHouse} className='me-3' />
-              <span>Home</span>
-            </li>
-          </NavLink>
-          <NavLink to='/teachers'
-          className={'nav-link'}
-          >
-            <li>
-              <FontAwesomeIcon icon={faEnvira} className='me-3' />
-              <span>Teachers</span>
-            </li>
-          </NavLink>
-          <NavLink to='/subjects' className='nav-link'>
-            <li>
-              <FontAwesomeIcon icon={faBookOpen} className='me-3' />
-              <span>Subjects</span>
-            </li>
-          </NavLink>
-          <NavLink to='/test' className='nav-link'>
-            <li>
-                <FontAwesomeIcon icon={faFile} className='me-3' />
-                <span>Test</span>
-            </li>
-          </NavLink>
-          <NavLink 
-          className={'nav-link'}
-          to='/account'
-          >
-            <li>
-              <FontAwesomeIcon icon={faUser} className='me-3' />
-              <span>Account</span>
-            </li>
-          </NavLink>
+              <span>Home</span> 
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              style={{
+                textDecoration:"none",
+                padding: "12px 50px 12px 12px",
+                }}
+              className={({ isActive }) =>
+              isActive ? "active-item" : "unactive-item "
+              }
+              to='/teachers'
+            >
+              
+                <FontAwesomeIcon icon={faEnvira} className='me-3' />
+                <span>Teachers</span>
+              
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              style={{
+                textDecoration:"none",
+                padding: "12px 50px 12px 12px",
+                }}
+              className={({ isActive }) =>
+              isActive ? "active-item" : "unactive-item "
+              }
+              to='/subjects'
+            >
+                <FontAwesomeIcon icon={faBookOpen} className='me-3' />
+                <span>Subjects</span>
+              
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              style={{
+                textDecoration:"none",
+                padding: "12px 50px 12px 12px",
+                }}
+              className={({ isActive }) =>
+              isActive ? "active-item" : "unactive-item "
+              }
+              to='/account'
+            >
+                <FontAwesomeIcon icon={faUser} className='me-3' />
+                <span>Account</span>
+            
+            </NavLink>
+          </li>
         </ul>
         <div className='pro' style={{ marginLeft: '12px' }}>
           <h5>Upgrade to pro</h5>
@@ -80,7 +105,16 @@ const Sidebar = () => {
           <img className='rocket' src='/imgs/sidebar/rocket0.png' alt='rocket' />
         </div>
         <div className='sett-btn'>
-          <NavLink to='/setting' className='nav-link'>
+          <NavLink 
+            style={{
+              textDecoration:"none",
+              padding: "12px 50px 12px 12px",
+              }}
+            className={({ isActive }) =>
+            isActive ? "active-item" : "unactive-item "
+            }
+            to='/setting'
+          >
             <FontAwesomeIcon icon={faGear} className='me-3' />
             <span>Setting</span>
           </NavLink>

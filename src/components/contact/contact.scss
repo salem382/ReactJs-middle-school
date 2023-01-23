@@ -1,0 +1,12 @@
+.logo-container {
+    @media (min-width:772px) {
+        width: 25%;
+    }
+    width: 50%;
+}
+.left-part {
+    @media(min-width:772px) {
+        border-left:1px solid #515151;
+        padding-left: 25px;
+    }
+}

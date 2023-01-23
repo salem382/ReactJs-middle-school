@@ -5,6 +5,7 @@ const ClassProgress = ({percent, color, topicName}) => {
 
     return (
         <section>
+          <Container>
             <Row className='align-items-center'>
               <Col className='col-2 d-none d-sm-block'>
                 <div 
@@ -19,12 +20,13 @@ const ClassProgress = ({percent, color, topicName}) => {
                  {topicName}
                 </div>
               </Col>
-              <Col className='col-8'>
+              <Col className='ms-auto col-7'>
                 <div className='d-flex align-items-center'>
                   <Progress color={color} percent={percent}/> <span className='ms-2' style={{color:color}}>{percent}</span> 
                 </div>
               </Col>
-          </Row>
+            </Row>
+          </Container>
         </section>
     )
 }

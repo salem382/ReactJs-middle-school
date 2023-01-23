@@ -7,16 +7,20 @@ import {Container, Row, Col} from 'react-bootstrap'
 const Footer = () => {
 
     return (
-        <div>
-            footer
-            {
-                /*
-                 example for fontawesome icon
-                    
-                 <FontAwesomeIcon icon={faUser}/>
-                */
-            }
-        </div>
+       
+            <div className='py-2'
+                style={{background:'#EAEAEA'}}
+            >
+            <Container>
+                <div className='w-50 w-sm-25 ms-auto d-flex justify-content-between'>
+                        <img src='/imgs/footer/facebook.png'/>
+                        <img src='/imgs/footer/linkedin.png'/>
+                        <img src='/imgs/footer/gmail.png'/>
+                        <img src='/imgs/footer/youtube.png'/>
+                </div>
+            </Container>
+            </div>
+        
     )
 }
 

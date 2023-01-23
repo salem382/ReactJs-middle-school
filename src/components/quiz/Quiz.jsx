@@ -9,18 +9,30 @@ const Quiz = () => {
     const [open3, setOpen3] = useState(false);
     const [open4, setOpen4] = useState(false);
 
+
+    const handleChange = (x) => {
+        x(true);
+        if (setOpen1 != x)
+            setOpen1(false);
+        if (setOpen2 != x)
+        setOpen2(false);
+        if (setOpen3 != x)
+        setOpen3(false);
+        if (setOpen4 != x)
+        setOpen4(false);
+    }
+
     return (
         <div className='quiz'>
             <h3>Quiz Question 1</h3>
             <p>
                 Which of these questions could you ask stakeholders during the early stages of a product?<br/>
-                (Select all that apply.)
             </p>
             <form>
                 <div className='element-container'>
                     <div className='check-conatiner'>
                         <span className='bd'></span>
-                        <input onChange={() => setOpen1(x => !x)} type='checkbox'/>
+                        <input  onChange={() => handleChange(setOpen1)} type='radio' name="ansQuiz"/>
                         <span style={{display:open1 ? 'block' : 'none'}} className='bg'></span>
                     </div>
                     <label>What kind of UX research have we done?</label>
@@ -28,7 +40,7 @@ const Quiz = () => {
                 <div  className='element-container'>
                     <div className='check-conatiner'>
                         <span className='bd'></span>
-                        <input  onChange={() => setOpen2(x => !x)} type='checkbox'/>
+                        <input onChange={() => handleChange(setOpen2)}  type='radio' name="ansQuiz"/>
                         <span style={{display:open2 ? 'block' : 'none'}} className='bg'></span>
                     </div>
                     <label>What kind of UX research have we done?</label>
@@ -36,7 +48,7 @@ const Quiz = () => {
                 <div  className='element-container'>
                     <div className='check-conatiner'>
                         <span className='bd'></span>
-                        <input  onChange={() => setOpen3(x => !x)} type='checkbox'/>
+                        <input onChange={() => handleChange(setOpen3)}  type='radio' name="ansQuiz"/>
                         <span style={{display:open3 ? 'block' : 'none'}} className='bg'></span>
                     </div>
                     <label>What kind of UX research have we done?</label>
@@ -44,7 +56,7 @@ const Quiz = () => {
                 <div  className='element-container'>
                     <div className='check-conatiner'>
                         <span className='bd'></span>
-                        <input  onChange={() => setOpen4(x => !x)} type='checkbox'/>
+                        <input onChange={() => handleChange(setOpen4)}  type='radio' name="ansQuiz"/>
                         <span style={{display:open4 ? 'block' : 'none'}} className='bg'></span>  
                     </div>
                     <label>What kind of UX research have we done?</label>

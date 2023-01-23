@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <Container>
             <div className='navbar d-flex py-2 justify-content-between'>
-                <div>
+                <div className='ps-2 ps-sm-0'>
                     <FontAwesomeIcon
                         style={{cursor: 'pointer' }}
                         onClick={() => dispatch(setOpenSidebar(true))}
@@ -29,7 +29,7 @@ const Navbar = () => {
                     <span className='mx-4'>
                         <FontAwesomeIcon className='fs-5 icon' icon={faBell}/>
                     </span>
-                    <Link to={'/signup'} className="nav-link">
+                    <Link to={'/login'} className="nav-link">
                     <span className='nav-login text-center'>
                         Login
                     </span>

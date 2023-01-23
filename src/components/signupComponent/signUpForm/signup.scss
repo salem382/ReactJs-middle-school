@@ -21,9 +21,13 @@
         select {
             border: none;
             border-bottom: 1px solid #C1C1C1;
-            width: 75%;
             outline: none;
             margin: 10px 0;
+            width: 45%;
+            @media (min-width:572) {
+                
+            }
+            
         }
         select {
             color: #C1C1C1;
@@ -35,14 +39,14 @@
     .btn-create-account {
         display: block;
         background-color: $blueColor;
-        width: 75%;
+        width: 50%;
         border-radius: 20px;
         color: #fff;
         font-weight: bolder;
         margin: 20px auto 0 auto;
         border: none;
-        padding: 8px;
-        font-size: 24px;
+        padding: 6px;
+        font-size: 18px;
     }
     .login {
         width: 75%;
