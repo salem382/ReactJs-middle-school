@@ -6,6 +6,7 @@ import StudyMaterial from '../../components/subjectsComponent/studyMaterial/stud
 import Footer from '../../components/footer/Footer';
 import Wrapper from '../../components/wrapper/Wrapper';
 import React from 'react';
+import Contact from '../../components/contact/Contact';
 
 const Subjects = () => {
  
@@ -17,6 +18,7 @@ const Subjects = () => {
         <SubjectHero />
         <Subjectsearch />
         <StudyMaterial />
+        <Contact />
         <Footer />
       </Wrapper>
     </>

@@ -5,6 +5,8 @@ import Settinginfo from "../../components/settingComponent/settingInfo/Settingin
 import SettingSendData from "../../components/settingComponent/settingSendData/SettingSendData";
 import Wrapper from "../../components/wrapper/Wrapper";
 import React from "react";
+import Contact from "../../components/contact/Contact";
+import Footer from "../../components/footer/Footer";
 
 const Setting = () => {
 
@@ -17,6 +19,8 @@ const Setting = () => {
                 <SettingControls />
                 <Settinginfo /> 
                 <SettingSendData />
+                <Contact/>
+                <Footer />
             </Wrapper>            
         </div>
     )
