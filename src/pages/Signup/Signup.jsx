@@ -4,7 +4,6 @@ import SignUpForm from '../../components/signupComponent/signUpForm/SignupForm';
 import React from 'react';
 const Signup = () => {
 
-    console.log ("done from sign up page")
     return (
         <div className='d-flex sign-up'>
             <GuyDraw />

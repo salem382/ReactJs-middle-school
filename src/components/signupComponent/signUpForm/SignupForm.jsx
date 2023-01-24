@@ -32,20 +32,6 @@ const SignUpForm = () => {
         grade:""
     });
 
-    /*
-        name:"agned",
-        email:"ajha@gmail.com",
-        password:"As#1sfgdsgsfgs",
-        phone:"01234567899",
-        gender:"male",
-        age:"22",
-        parent_phone:"01234567899",
-        parent_email:"saasf@gmail.com",
-        city: "Efyot",
-        state:"caire",
-        section:"public",
-        grade:"first"
-    */
 
     const postData = (e) => {
         let usr = {...userData};
@@ -54,13 +40,15 @@ const SignUpForm = () => {
     }
 
     const getData = async() => {
-
+        setIsPost(true);
         try {
             const {data} = await axios.post('https://newbrainsmiddle.com/api/auth/userRegister',userData)
-            console.log (data);
+           navigate('/login');
         }
         catch (error) {
-            setErrArr({...JSON.parse(error.response.data)})
+            setIsPost(false);
+            error.response.data.message ?  setMsg("This Email is Already Registed use Another One"):
+            setErrArr({...JSON.parse(error.response.data)});
         }
     }
 
@@ -96,7 +84,7 @@ const SignUpForm = () => {
                 </div>
                 <div className='d-flex justify-content-between'>
                     <div className='w-50'>
-                        <select onChange={(e) => postData(e)} className='select' name="gender" id="lang">
+                        <select onChange={(e) => postData(e)} className='select' name="gender" id="dsf">
                             <option value="" disabled selected>Gender</option>
                             <option value="male">male</option>
                             <option value="female">female</option>
@@ -132,7 +120,7 @@ const SignUpForm = () => {
                 </div>
                 <div className='d-flex justify-content-between'>
                     <div className='w-50'>
-                        <select onChange={(e) => postData(e)} className='select' name="section" id="lang">
+                        <select onChange={(e) => postData(e)} className='select' name="section">
                             <option value="" disabled selected>section</option>
                             <option value="language">language</option>
                             <option value="public">public</option>
@@ -140,18 +128,31 @@ const SignUpForm = () => {
                         <div className='text-danger'style={{height:"20px", fontSize:"14px"}}>{errArr.section && errArr.section[0]}</div>        
                     </div>
                     <div className='w-50'>
-                        <select onChange={(e) => postData(e)} className='select' name="grade" id="lang">
+                        <select onChange={(e) => postData(e)} className='select' name="grade">
                             <option value="" disabled selected>grade</option>
-                            <option value="language">first</option>
-                            <option value="public">second</option>
-                            <option value="language">third</option>
+                            <option value="first">first</option>
+                            <option value="second">second</option>
+                            <option value="third">third</option>
                         </select>
                         <div className='text-danger'style={{height:"20px", fontSize:"14px"}}>{errArr.grade && errArr.grade[0]}</div>    
                     </div>
                 </div>
-                <button className='btn-create-account'>Create Account</button>
+                <button className='btn-create-account py-2'>
+                    {isPost ? (
+                        <>
+                            <span className="spinner-border spinner-border-sm me-3" role="status" aria-hidden="true"></span>
+                             Loading ...   
+                        </>
+                    ) : ("Create Account")}
+                </button>
+                <p className='text-danger m-0'
+                   style={{
+                    height:"20px",
+                    fontSize:"14px"    
+                }} 
+                >{msg}</p>
             </form>
-            <p className='login w-50 ms-auto pb-4 pb-lg-0 d-flex'> 
+            <p className='login w-50 ms-auto pb-4 mt-3 mt-md-0 pb-lg-0 d-flex'> 
                 <span>Already have an account? </span> 
                 <span>
                 <Link to='/login' className='nav-link'>

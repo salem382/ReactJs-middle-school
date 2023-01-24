@@ -36,7 +36,10 @@
     .btn-create-account {
         display: block;
         background-color: $blueColor;
-        width: 50%;
+        width: 75%;
+        @media (min-width:"772px") {
+            width: 50%;
+        }
         border-radius: 20px;
         color: #fff;
         font-weight: bolder;
