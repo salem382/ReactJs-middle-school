@@ -5,21 +5,23 @@ const CircularProgressSection = () => {
 
     return (
         <section className="mt-5">
-            <h5 className="mb-4">Class Progress</h5>
-            <Row>
-                <Col md = {3} sm = {6} className="mb-4 mb-md-0">
-                    <CircularProgress color="#F83D00" percent = "20" subjectName = "math" registedNumber = "10" />
-                </Col>
-                <Col md = {3} sm = {6} className="mb-4 mb-md-0">
-                    <CircularProgress color="#2584E9" percent = "30" subjectName = "math" registedNumber = "50" />
-                </Col>
-                <Col md = {3} sm = {6} className="mb-4 mb-md-0">
-                    <CircularProgress color="#05AF35" percent = "20" subjectName = "arabic" registedNumber = "70" />
-                </Col>
-                <Col md = {3} sm = {6} className="mb-4 mb-md-0">
-                    <CircularProgress color="#F83D00" percent = "40" subjectName = "asgasg" registedNumber = "80" />
-                </Col>
-            </Row>
+            <Container>
+                <h5 className="mb-4">Class Progress</h5>
+                <Row>
+                    <Col md = {3} sm = {6} className="mb-4 mb-md-0">
+                        <CircularProgress color="#F83D00" percent = "20" subjectName = "math" registedNumber = "10" />
+                    </Col>
+                    <Col md = {3} sm = {6} className="mb-4 mb-md-0">
+                        <CircularProgress color="#2584E9" percent = "30" subjectName = "math" registedNumber = "50" />
+                    </Col>
+                    <Col md = {3} sm = {6} className="mb-4 mb-md-0">
+                        <CircularProgress color="#05AF35" percent = "20" subjectName = "arabic" registedNumber = "70" />
+                    </Col>
+                    <Col md = {3} sm = {6} className="mb-4 mb-md-0">
+                        <CircularProgress color="#F83D00" percent = "40" subjectName = "asgasg" registedNumber = "80" />
+                    </Col>
+                </Row>
+            </Container>
         </section>
     )
 }
