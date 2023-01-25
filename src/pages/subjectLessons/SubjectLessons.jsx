@@ -3,6 +3,10 @@ import SubjectActiveVideo from '../../components/subjectLessonsComponent/subject
 import SubjectVideos from '../../components/subjectLessonsComponent/subjectVideos/SubjectVideos';
 import SubjectControls from '../../components/subjectLessonsComponent/subjectControls/SubjectCobtrols';
 
+
+
+
+
 const SubjectLessons = () => {
 
     return (
