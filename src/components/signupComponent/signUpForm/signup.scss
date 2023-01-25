@@ -23,11 +23,8 @@
             border-bottom: 1px solid #C1C1C1;
             outline: none;
             margin: 10px 0;
-            width: 45%;
-            @media (min-width:572) {
-                
-            }
-            
+            width: 90%;
+            margin: 0 !important;
         }
         select {
             color: #C1C1C1;
@@ -39,7 +36,10 @@
     .btn-create-account {
         display: block;
         background-color: $blueColor;
-        width: 50%;
+        width: 75%;
+        @media (min-width:"772px") {
+            width: 50%;
+        }
         border-radius: 20px;
         color: #fff;
         font-weight: bolder;

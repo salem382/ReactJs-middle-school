@@ -6,10 +6,14 @@ import {Container} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {setOpenSidebar} from '../../store/sidebarRouteSlice'
 import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+
+
 
 const Navbar = () => {
 
    const dispatch = useDispatch ();
+
 
     return (
         <Container>
@@ -29,11 +33,20 @@ const Navbar = () => {
                     <span className='mx-4'>
                         <FontAwesomeIcon className='fs-5 icon' icon={faBell}/>
                     </span>
-                    <Link to={'/login'} className="nav-link">
-                    <span className='nav-login text-center'>
-                        Login
-                    </span>
-                    </Link>
+
+                    {
+                        localStorage.getItem("newbrainsToken") ?(
+                            <div style={{width:"50px", height:"50px"}}>
+                                <img src='/imgs/navbar/user.webp' alt='user-img' className='rounded-circle w-100 h-100'/>
+                            </div>
+                        ) : (
+                            <Link to={'/login'} className="nav-link">
+                            <span className='nav-login text-center'>
+                                Login
+                            </span>
+                            </Link>
+                        )
+                    }
                 </div>
             </div>
         </Container>

@@ -6,6 +6,8 @@ import StudyMaterial from '../../components/subjectsComponent/studyMaterial/stud
 import Footer from '../../components/footer/Footer';
 import Wrapper from '../../components/wrapper/Wrapper';
 import React from 'react';
+import Contact from '../../components/contact/Contact';
+import SubjectLessons from '../subjectLessons/SubjectLessons';
 
 const Subjects = () => {
  
@@ -14,10 +16,12 @@ const Subjects = () => {
       <Sidebar />
       <Navbar />
       <Wrapper>
-        <SubjectHero />
+        <SubjectLessons />
+        {/* <SubjectHero />
         <Subjectsearch />
         <StudyMaterial />
-        <Footer />
+        <Contact />
+        <Footer /> */}
       </Wrapper>
     </>
   );

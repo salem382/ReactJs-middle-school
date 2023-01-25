@@ -5,6 +5,11 @@ import Wrapper from "../../components/wrapper/Wrapper";
 import { Container, Row, Col } from "react-bootstrap";
 import TimeSpentSection from "../../components/accountComponent/timeSpentSection/TimeSpentSection";
 import CircularProgressSection from "../../components/accountComponent/circularProgressSection/CircularProgressSection";
+import GoodMorning from "../../components/accountComponent/goodMorning/GoodeMorning";
+import Contact from '../../components/contact/Contact';
+import Footer from '../../components/footer/Footer';
+
+
 
 const Account = () => {
 
@@ -15,6 +20,9 @@ const Account = () => {
             <Wrapper>
                 <Container>
                     <Row>
+                        <Col className="col-12">
+                            <GoodMorning />
+                        </Col>
                         <Col lg={6}>
                             <ClassProgressSection />
                         </Col>
@@ -26,6 +34,8 @@ const Account = () => {
                         </Col>
                     </Row>
                 </Container>
+                <Contact/>
+                <Footer />
             </Wrapper>
         </div>
     )

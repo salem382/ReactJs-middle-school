@@ -4,7 +4,7 @@ import Progress from '../../Progress';
 const ClassProgress = ({percent, color, topicName}) => {
 
     return (
-        <section>
+        <section className='my-3'>
           <Container>
             <Row className='align-items-center'>
               <Col className='col-2 d-none d-sm-block'>

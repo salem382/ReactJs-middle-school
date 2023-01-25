@@ -1,0 +1,8 @@
+.footer {
+    .footer-icon {
+        width: 50%;
+        @media (min-width:570px) {
+            width: 25%;
+        }
+    }
+}
