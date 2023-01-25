@@ -26,7 +26,9 @@ const Navbar = () => {
 
     return (
         <Container>
-            <div className='navbar d-flex py-2 justify-content-between'>
+            <div className='navbar d-flex py-2 justify-content-between'
+                style={{width:"110%"}}
+            >
                 <div className='ps-2 ps-sm-0'>
                     <FontAwesomeIcon
                         style={{cursor: 'pointer' }}

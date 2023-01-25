@@ -54,6 +54,8 @@
     @include blue-btn(80%, $blueColor); 
       font-size: $fontSize;
     font-weight: $fontWeight;
+    display: block;
+    width: 100% !important;
   }
   .unactive-item {
     font-size: $fontSize;

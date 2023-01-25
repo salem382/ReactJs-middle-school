@@ -35,7 +35,7 @@ const Sidebar = () => {
             <NavLink 
             style={{
               textDecoration:"none",
-              padding: "12px 60px 12px 12px",
+              padding: "12px 50px 12px 12px",
               }}
               className={({ isActive }) =>
               isActive ? "active-item" : "unactive-item "

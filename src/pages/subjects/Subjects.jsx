@@ -16,12 +16,12 @@ const Subjects = () => {
       <Sidebar />
       <Navbar />
       <Wrapper>
-        <SubjectLessons />
-        {/* <SubjectHero />
+        {/* <SubjectLessons /> */}
+        <SubjectHero />
         <Subjectsearch />
         <StudyMaterial />
         <Contact />
-        <Footer /> */}
+        <Footer />
       </Wrapper>
     </>
   );
