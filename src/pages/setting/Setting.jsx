@@ -7,10 +7,11 @@ import Wrapper from "../../components/wrapper/Wrapper";
 import React from "react";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
+import { useState } from "react";
 
 const Setting = () => {
 
-    
+
     return (
         <div>
             <Sidebar />
@@ -18,7 +19,6 @@ const Setting = () => {
             <Wrapper>
                 <SettingControls />
                 <Settinginfo /> 
-                <SettingSendData />
                 <Contact/>
                 <Footer />
             </Wrapper>            

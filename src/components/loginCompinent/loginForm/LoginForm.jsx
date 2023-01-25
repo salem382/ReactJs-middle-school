@@ -8,6 +8,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+
+
 const LoginForm = () => {
 
 
@@ -32,14 +34,22 @@ const LoginForm = () => {
     const getData = async() => {
         setIsPost(true);
         try {
-            const {data} = await axios.post(`https://newbrainsmiddle.com/api/auth/userLogin?email=${userData.email}&password=${userData.password}`);
-            localStorage.setItem("newbrainsToken", data.response.access_token);
+            const {data} = await axios.post(`https://newbrainsmiddle.com/api/auth/userLogin`,null,{
+
+                params: { email: userData.email, password: userData.password }
+            }
+            );
+
+            console.log (data);
+
+            localStorage.setItem("newbrainsToken", data.access_token);
             navigate("/");
             setIsPost(false);
         }
         catch (error) {
             setIsPost(false);
-            error.response.data.message && setMsg( error.response.data.message);
+            console.log(error);
+            error.response.data.message && setMsg(error.response.data.message);
         }
         
     }

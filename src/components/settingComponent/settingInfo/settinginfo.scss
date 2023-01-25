@@ -12,6 +12,7 @@
             padding: 7px;
             width: 80%;
             margin-bottom: 15px;
+            outline: none;
             &::placeholder {
                 color: #5E6D55;
             }
@@ -20,45 +21,6 @@
             }
             
         }
-        .setting-name {
-            display: flex;
-            flex-wrap: wrap;
-            input {
-                width: 38%;
-                &:first-child {
-                    @media (min-width:773px) {
-                        margin-right: 4%;
-                    }
-                }
-                @media (max-width:772px) {
-                    width: 100%;
-                    &:first-child {
-                        margin-bottom: 15px;
-                    }
-                } 
-                outline: none;            
-            }
-        }
-        .setting-phone {
-            display: flex;
-            justify-content: space-between;
-            width: 80%;
-            @media (max-width:772px) {
-                width: 100%;
-            }
-            input {
-                width: 60%;  
-            }
-            button {
-                background: #15BE4F;
-                border-radius:50px;
-                height: 45px;
-                color: #fff;
-                border: none;
-                padding: 0 10px;
-                cursor: pointer;
-            }
-        } 
     }
     @media (max-width:772px) {
         width: 80%;

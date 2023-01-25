@@ -5,14 +5,23 @@ import {faRocketchat} from '@fortawesome/free-brands-svg-icons';
 import {Container} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {setOpenSidebar} from '../../store/sidebarRouteSlice'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-
+import {getUser} from '../../store/CurrentUser';
+import axios from 'axios';
 
 
 const Navbar = () => {
 
    const dispatch = useDispatch ();
+   
+   const {user} = useSelector(state =>state.userSlice)
+
+
+    useEffect(() => {
+        
+        dispatch(getUser());
+    },[])
 
 
     return (
@@ -37,7 +46,7 @@ const Navbar = () => {
                     {
                         localStorage.getItem("newbrainsToken") ?(
                             <div style={{width:"50px", height:"50px"}}>
-                                <img src='/imgs/navbar/user.webp' alt='user-img' className='rounded-circle w-100 h-100'/>
+                                <img src={user.image ?user.image :'/imgs/navbar/user.webp'} alt='user-img' className='rounded-circle w-100 h-100'/>
                             </div>
                         ) : (
                             <Link to={'/login'} className="nav-link">
