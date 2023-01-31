@@ -7,7 +7,7 @@ const SubjectActiveVideo = () => {
         width='100%'
         height='50vh'
         controls
-        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+        url='https://www.youtube.com/watch?v=MKtBRwiQqZ8'
       />
     </div>
   );
