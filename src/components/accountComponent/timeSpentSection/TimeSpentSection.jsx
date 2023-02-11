@@ -1,17 +1,21 @@
 import { Container } from "react-bootstrap";
 import Progress from "../Progress";
+import { useTranslation } from "react-i18next";
 
 const TimeSpentSection = () => {
+
+    const {t} = useTranslation();
+
 
     return (
         <div className="mt-5">
         <Container>
             <div className="d-flex justify-content-between">
-                <h5>Latest Progress</h5>
+                <h5>{t("account-latest-Progress")}</h5>
                 <p className="text-start b"
                 style={{color:"#c2c2c2"}}
                 >
-                    More...</p>
+                    {t("account-more")}</p>
             </div>
             <div className="d-flex  justify-content-between pt-4"
             style={{height:'200px'}}

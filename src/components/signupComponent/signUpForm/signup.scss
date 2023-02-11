@@ -7,6 +7,9 @@
     width: 75%;
     right: 0;
     top: 0;
+    &:lang(ar) {
+        direction: rtl; 
+    }
     .or {
         font-weight: 400;
         font-size: 18px;

@@ -7,21 +7,22 @@ import Contact from '../../components/contact/Contact';
 import Footer from '../../components/footer/Footer';
 import Wrapper from '../../components/wrapper/Wrapper';
 import React from 'react';
+import './teachers.scss';
 
 const Teachers = () => {
 
     return (
-        <>
+        <section className='teachers-page'>
             <Sidebar/>
             <Navbar/>
             <Wrapper>
                 <Teacherslider/>
-                <Teachersearch />
+                {/* <Teachersearch /> */}
                 <Teacherpersons />
                 <Contact />
                 <Footer/>
             </Wrapper>
-        </>
+        </section>
     )
 }
 

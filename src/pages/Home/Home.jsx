@@ -8,11 +8,13 @@ import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Wrapper from '../../components/wrapper/Wrapper';
 import React from 'react';
+import './home.scss';
+
 
 const Home = () => {
 
   return (
-    <>
+    <section className='home-page'>
       <Sidebar />
       <Navbar />
       <Wrapper>
@@ -23,7 +25,7 @@ const Home = () => {
         <Contact />
         <Footer />
       </Wrapper>
-    </>
+    </section>
   );
 };
 

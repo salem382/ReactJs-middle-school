@@ -8,13 +8,13 @@ import CircularProgressSection from "../../components/accountComponent/circularP
 import GoodMorning from "../../components/accountComponent/goodMorning/GoodeMorning";
 import Contact from '../../components/contact/Contact';
 import Footer from '../../components/footer/Footer';
-
+import './accountPage.scss';
 
 
 const Account = () => {
 
     return (
-        <div>
+        <div className="account-page">
             <Sidebar />
             <Navbar />
             <Wrapper>

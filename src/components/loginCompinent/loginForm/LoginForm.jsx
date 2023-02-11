@@ -7,13 +7,16 @@ import {faEye} from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
-
+import {getUser} from '../../../store/CurrentUser';
+import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import BtnReload from '../../btnReload/BtnReload';
 
 const LoginForm = () => {
 
+    const {t} = useTranslation();
 
-    const [showPass, setShowPass] = useState(false);
+    const dispatch = useDispatch();
 
     
     const navigate = useNavigate();
@@ -40,15 +43,13 @@ const LoginForm = () => {
             }
             );
 
-            console.log (data);
-
             localStorage.setItem("newbrainsToken", data.access_token);
             navigate("/");
             setIsPost(false);
+            dispatch(getUser());
         }
         catch (error) {
             setIsPost(false);
-            console.log(error);
             error.response.data.message && setMsg(error.response.data.message);
         }
         
@@ -64,28 +65,26 @@ const LoginForm = () => {
         <div className='loginform'>
             <TopPartSignup />
             <br/>
-            <SocialSign  head = "Welcome Back"/>
+            <SocialSign  head = {t("Welcom-back")}/>
              <form onSubmit={submitData}>
-                <input onChange={(e) => postData(e)} name="email" placeholder='Email Adress' type='email' />
+                <input onChange={(e) => postData(e)} name="email" placeholder={t("log-in-form-Email")} type='email' />
                 <div className='position-relative m-auto w-75' >
-                    <input onChange={(e) => postData(e)} name="password" className='w-100' placeholder='Password' type={showPass ? 'text' : 'password'} />
-                    <FontAwesomeIcon onMouseUp={() =>setShowPass(false)} onMouseDown={() =>setShowPass(true)} className='position-absolute' style={{color:'#c1c1c1', right:"0", top:'20px', cursor:'pointer'}} icon={faEye}/>
+                    <input onChange={(e) => postData(e)} name="password" className='w-100' placeholder={t("log-in-form-password")} type={'password'} />
                 </div>
                 <button className='btn-create-account'>
                     {isPost ? (
                             <>
-                                <span className="spinner-border spinner-border-sm me-3" role="status" aria-hidden="true"></span>
-                                Loading ...   
+                                <BtnReload/>   
                             </>
-                        ) : ("Login")}
+                        ) : <span>{t("log-in-form-button")}</span>}
                 </button>
                 <p className='text-danger'>{msg}</p>
             </form>
             <p className='login  d-flex'> 
-            <span>Already have an account? </span> 
+            <span>{t("log-in-form-paragraph")} </span> 
                 <span>
                 <Link to='/signup' className='nav-link'>
-                    signup
+                    {t("log-in-form-link")}
                 </Link>
                 </span>
             </p>

@@ -1,12 +1,21 @@
 import './homeinfo.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faEnvira } from '@fortawesome/free-brands-svg-icons';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
+
+
 
 const Homeinfo = () => {
+
+
+
+  const {t} = useTranslation();
+
+
   return (
     <Container>
+
+
+    
       <div className='info'>
         <div className='info__img'>
           <img src='./imgs/home/people.png' alt='' />
@@ -24,21 +33,21 @@ const Homeinfo = () => {
               <div className='icon'>
                 <img src='./imgs/home/clockIcon.png' alt='' />
               </div>
-              <div className='title'>Quiz after the lesson</div>
+              <div className='title'>{t("home-info-feature-1-title")}</div>
               <div className='para'>Lorem ipsum dolor sit amet</div>
             </li>
             <li className='feature'>
               <div className='icon'>
                 <img src='./imgs/home/peopleIcon.png' alt='' />
               </div>
-              <div className='title'>Many Teachers</div>
+              <div className='title'>{t("home-info-feature-2-title")}</div>
               <div className='para'>Lorem ipsum dolor sit amet</div>
             </li>
             <li className='feature'>
               <div className='icon'>
                 <img src='./imgs/home/enjoyIcon.png' alt='' />
               </div>
-              <div className='title'>Enjoy learning</div>
+              <div className='title'>{t("home-info-feature-3-title")}</div>
               <div className='para'>Lorem ipsum dolor sit amet</div>
             </li>
           </ul>

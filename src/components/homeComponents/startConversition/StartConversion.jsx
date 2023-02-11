@@ -1,40 +1,45 @@
 import './startconversion.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faEnvira } from '@fortawesome/free-brands-svg-icons';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
+
 
 const StartConversion = () => {
+
+  const {t} = useTranslation();
+
+
   return (
     <Container>
+
+      
       <div className='conv'>
-        <h1 className='title'>Let’s Start a Conversation</h1>
+        <h1 className='title'>{t("home-conv-title-main")}</h1>
         <form>
           <input
             className='form-input'
             type='text'
             name='username'
-            placeholder='Name'
+            placeholder={t("home-conv-form-name")}
           />
           <input
             className='form-input'
             type='text'
             name='phone'
-            placeholder='Phone'
+            placeholder={t("home-conv-form-phone")}
           />
           <input
             className='form-input'
             type='email'
             name='email'
-            placeholder='Email'
+            placeholder={t("home-conv-form-email")}
           />
           <textarea
             className='form-input'
             name='message'
-            placeholder='Message'
+            placeholder={t("home-conv-form-message")}
           ></textarea>
           <button className='action'>
-            Send <img src='./imgs/home/rightArrow.png' alt='' />
+            <span>{t("home-conv-form-button")} </span><img src='./imgs/home/rightArrow.png' alt='' />
           </button>
         </form>
       </div>

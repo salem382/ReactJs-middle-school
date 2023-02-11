@@ -1,5 +1,8 @@
 @import '../../../sass/variables.scss';
 .loginform {
+    &:lang(ar) {
+        direction: rtl;
+    }
     position: absolute;
     height: 100vh;
     top: 0;

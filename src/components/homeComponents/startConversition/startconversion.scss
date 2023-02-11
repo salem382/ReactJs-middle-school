@@ -54,6 +54,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      &:lang(ar) {
+        direction: ltr;
+      }
       img {
         margin-left: 10px;
       }

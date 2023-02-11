@@ -3,18 +3,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPhoneVolume, faLocationDot, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {Container, Row, Col} from 'react-bootstrap';
 import Logo from '../newBrainsLogo/Logo';
-
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+
+    const {t} = useTranslation();
 
     return (
         <section className='py-4 mt-5'
             style={{background:'#F3F3F3'}}
         >
+
            <Container>
                 <Row>
                     <Col className='col-12'>
-                        <div className='logo-container'>
+                        <div className='logo-container' style={{width:"170px"}}>
                             <Logo src={"/imgs/sidebar/logo.png"} />
                         </div>
                     </Col>
@@ -23,7 +26,7 @@ const Contact = () => {
                             <p className='mt-4 lh-lg'
                                 style={{color:"#9E988F"}}
                             >
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+                                   {t("footer-logo-para")}
                             </p>
                         </div>
                     </Col>
@@ -34,25 +37,25 @@ const Contact = () => {
                             <div className='d-flex align-items-center'>
                                 <div className='d-flex'>
                                     <FontAwesomeIcon className='mt-1' icon={faPhoneVolume}/>
-                                    <p className='ms-3'>Contact</p>
+                                    <p className='mx-3'>{t("footer-contact")}</p>
                                 </div>
-                                <p className='ms-3'>+20 100 298 2946</p>
+                                <p >{t("footer-number")}</p>
                             </div>
                             <div className='d-flex align-items-center'>
                                 <div className='d-flex'>
                                     <FontAwesomeIcon className='mt-1' icon={faLocationDot}/>
-                                    <p className='ms-3'>Location</p>
+                                    <p className='mx-3'>{t("footer-location")}</p>
                                 </div>
-                                <p className='ms-3'
+                                <p 
                                 
-                                >9, 6Octobr st, ain shams, Cairo, Egypt</p>
+                                >{t("footer-location%")}</p>
                             </div>
                             <div className='d-flex align-items-center'>
                                 <div className='d-flex'>
                                     <FontAwesomeIcon className='mt-1' icon={faEnvelope}/>
-                                    <p className='ms-3'>Email</p>
+                                    <p className='mx-3'>{t("footer-email")}</p>
                                 </div>
-                                <p className='ms-3'>Contact@newbrains-eg.com</p>
+                                <p>{t("footer-email%")}</p>
                             </div>
                         </div>
                     </Col>

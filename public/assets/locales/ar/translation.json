@@ -1,0 +1,177 @@
+{
+
+  "navbar-log-in": "تسجيل الدخول",
+  
+  "footer-about-us": "من نحن",
+  "footer-contact-us": "تواصل معنا",
+  "footer-features": "الخصائص",
+
+  "sign-up-form-header": "التسجيل",
+  "sign-up-button-apple": "التسجيل باستخدام حساب ابل",
+  "sign-up-button-google": "التسجيل باستخدام حساب جوجل",
+  "sign-up-form-first-name": "الاسم كامل",
+  "sign-up-form-last-name": "البريد الألكتروني لولي الأمر ",
+  "sign-up-form-Email": "البريد الالكتروني",
+  "sign-up-form-password": "كلمة المرور",
+  "sign-up-form-age": "العمر",
+  "sign-up-form-gender": "النوع",
+  "sign-up-form-gender-male": "ذكر",
+  "sign-up-form-gender-female": "انثي",
+  "sign-up-form-phone": "رقم الهاتف",
+  "sign-up-form-parent-phone": "هاتف ولي الامر",
+  "sign-up-form-state": "المحافظة",
+  "sign-up-form-city": "المدينة",
+  "sign-up-form-section": "القسم",
+  "sign-up-form-section-public": "عام",
+  "sign-up-form-section-language": "لغات",
+  "sign-up-form-grade": "المرحلة الدراسية",
+  "sign-up-form-grade-first": "الأول",
+  "sign-up-form-grade-second": "الثاني",
+  "sign-up-form-grade-third": "الثالث",
+  "sign-up-form-button": "إنشاء حساب",
+  "sign-up-form-paragraph": "لديك حساب بالفعل ؟",
+  "sign-up-form-link": "الدخول",
+
+  "log-in-form-header": "تسجيل الدخول",
+  "log-in-button-facebook": "التسجيل باستخدام فيسبوك",
+  "log-in-button-google": "التسجيل باستخدام جوجل",
+  "log-in-form-Email": "البريد الالكتروني",
+  "log-in-form-password": "كلمه المرور",
+  "log-in-form-button": "تسجيل الدخول",
+  "log-in-form-paragraph": "لا تمتلك حساب ؟",
+  "log-in-form-link": "انشاء حساب",
+  "Welcom-back" : "مرحباً بك مجدداً",
+
+
+  
+  "sidebar-home" : "الصفحة الرئيسية",
+  "sidebar-teachers":"المدرسين",
+  "sidebar-subkects":"المواد",
+  "sidebar-account":"الصفحة الشخصية",
+  "sidebar-setting":"الإعدادت",
+  "sidebar-upgrade-header":"تطوير للإحترافي",
+  "sidebar-pargraph-part1":"Unlock premium",
+  "sidebar-pargraph-part2":"features for free",
+  "sidebar-try":"جرب الأن",
+
+
+  "Home-head1":"إستمتع وتعلم",
+  "Home-head2":"في نفس الوقت",
+  "Home-pargraph1":"أنسي القواعد القديمة",
+  "Home-pargraph2":"يمكنك الحصول علي أفضل تجربة للتعلم الآن  ",
+  "Home-Join-free":"إنضم مجاناً",
+  "Home-login":"تسجيل الدخول",
+  
+
+
+  "lessons-button-view-pdf": "مشاهدة المصادر",
+  "lessons-button-start-quiz": "بداية الامتحان",
+  "lessons-button-next": "التالي",
+
+  "profile-bar-personal-info": "الملعومات الشخصية",
+  "profile-bar-password": "كلمة المرور",
+  "profile-personal-information-form-first-name": "الاسم",
+  "profile-personal-information-form-last-name": "اسم العائلة",
+  "parent_email": "البريد الألكتروني لولي الأمر",
+  "profile-personal-information-form-password": "كلمة المرور",
+  "profile-personal-information-form-phone": "رقم الهاتف",
+  "profile-personal-information-form-parent-phone": "هاتف ولي الامر",
+  "profile-personal-information-form-gender": "النوع",
+  "profile-personal-information-form-state": "المحافظة",
+  "profile-personal-information-form-city": "المدينة",
+  "profile-personal-information-form-section": "القسم",
+  "profile-personal-information-form-grade": "المرحلة الدراسية",
+  "profile-personal-information-form-age": "العمر",
+  "profile-personal-information-form-button-save": "حفظ",
+  "profile-personal-information-form-button-cancel": "الغاء",
+  "profile-password-form-current-password": " كلمة المرور الحالية",
+  "profile-password-form-new-password": "كلمة المرور الجديدة",
+  "profile-password-form-verify-password": "تأكيد كلمة المرور",
+  "profile-password-form-button-save": "حفظ",
+  "profile-password-form-button-cancel": "الغاء",
+
+  "ourTeachers-header": "مدرسينا",
+
+
+
+
+  "home-info-feature-1-title": "امتحان بعد الدرس",
+  "home-info-feature-1-para": "Lorem ipsum dolor sit amet",
+  "home-info-feature-2-title": "العديد من المدرسين",
+  "home-info-feature-2-para": "Lorem ipsum dolor sit amet",
+  "home-info-feature-3-title": "تعلم باستمتاع",
+  "home-info-feature-3-para": "Lorem ipsum dolor sit amet",
+
+
+
+
+  "home-history-title": "تاريخنا",
+  "home-history-para": "هي منصة تعليمية متطورة أنشئت كي تحقق للطلاب كل احتياجاتهم التعليمية للوصول لأعلى مستوى من الفهم والاستيعاب عن طريق تقديم المعلومات العلمية بطريقة متطورة مبنية على أسس علمية واعتمادًا على نخبة من أساتذة ومتخصصين في الجانب العلمي والتكنولوجي لتوصيل المعلومات ومشاركة الطالب في حل الأسئلة.",
+  
+  "home-conv-title-main": "لنبدأ المحادثة",
+  "home-conv-form-name": "الاسم",
+  "home-conv-form-phone": "الموبايل",
+  "home-conv-form-email": "الحساب",
+  "home-conv-form-message": "الرسالة",
+  "home-conv-form-button": "أرسل",
+  
+  
+  "footer-logo-para": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat",
+  "footer-contact" : "الاتصال",
+  "footer-number" : "0100 298 2946",
+  "footer-location":"الموقع",
+  "footer-location%":"9, 6Octobr st, ain shams, Cairo, Egypt",
+  "footer-email":"البريد الألكتروني",
+  "footer-email%":"Contact@newbrains-eg.com",
+
+
+
+  "subject-slide-title1" : "استمتع وتعلم الكثير",
+  "subject-slide-title2" : "",
+
+
+
+
+
+
+  "video-controls-pdf": "اعرض PDF",
+  "video-controls-next": "التالي",
+  "video-controls-previous": "السابق",
+  "video-controls-start": "ابدأ الاختبار",
+
+  "side-bar-home": "الصفحه الرئيسية",
+  "side-bar-profile": "الصفحه الشخصية",
+  "side-bar-more": "المزيد",
+  "side-bar-setting": "الأعدادت",
+  "side-bar-logout": "تسجيل الخروج",
+  "submit-btn": "ارسال",
+
+  "account-latest-Progress": "أخر تقدم",
+  "account-more": "المزيد...",
+  "account-Topic": "الموضوع",
+  "account-class-progress": "التقدم الدراسي",
+  "account-topic": "الموضوع",
+
+  "account-good-morning": "ًصباح الخير",
+  "account-good-part-one": "!لقد تعلمت",
+  "account-good-part-two": "70% من",
+  "account-good-part-three": " أهدافك هذا الاسبوع!",
+  "account-good-part-four": "تابع التقدم وحسن من نتائجك!",
+
+  "terms-heading": "الأحكام والشروط ",
+  "terms-para-1": "New Brains هي عبارة عن منصة تعليمية تديرها One Two Three للخدمات التعليمية وهي شركة مصرية مسجلة مخصصة لتوفير جميع المحتويات والمناهج التعليمية في مصر.",
+  "terms-para-2": "إذا كنت ترغب في الانضمام إلى موقعنا ، فعليك قراءة جميع الشروط والأحكام وفهمها والموافقة عليها",
+  "term-1": "لا يمكننا ضمان استمرار الخدمة دون أي انقطاع لأي سبب من الأسباب داخل الشركة أو خارجها والشركة غير مسؤولة عن أي أضرار قد تحدث نتيجة هذا الانقطاع.",
+  "term-2": "لدينا الحق الكامل في الاحتفاظ بالخدمة جزئيًا أو كليًا لأي أسباب تجارية أو غيرها دون سابق إنذار. الشركة غير مسؤولة عن أي أضرار قد تحدث نتيجة هذا الانقطاع.",
+  "term-3": "لا يحق لك نشر أي محتوى غير قانوني أو فاحش أو سياسي أو ديني أو أي محتوى يشجع على العنف أو العنصرية أو التنمر أو أي طبيعة أخرى تعتبرها الشركة غير مناسبة ومهينة. في هذه الحالة ، سنلغي عضويتك على الفور ويحق لنا مقاضاتك أنت وولي أمرك عن أي أضرار مالية أو تأديبية. ",
+  "term-4": "أنت توافق على دفع الرسوم الشهرية الكاملة للعضوية بما في ذلك أي ضرائب إضافية تضاف إلى الرسوم. لن تكون هناك عضوية بدون مدفوعات.",
+  "term-5": "إذا كنت تدفع من خلال بطاقات الخصم أو الائتمان ، فقد تتم المدفوعات من خلال طرف ثالث. والشركة ليست مسؤولة عن أمان معلوماتك الشخصية التي يحتفظ بها طرف ثالث.",
+  "term-6": "تحتفظ الشركة بحق التعاقد مع طرف ثالث لتشغيل الموقع دون أي تحذيرات مع الوفاء بجميع التزاماتنا.",
+  "term-7": "إذا كان عمرك أقل من 18 عامًا ، فسيتم النظر في الموافقة الضمنية للوصي عليك وفرضها.",
+  "term-8": "لا يمكنك استخدام الموقع لأي أغراض تجارية. إذا ثبت ذلك ، فسيتم إلغاء عضويتك على الفور وسنحتفظ بحقنا في مقاضاتك أنت وولي أمرك عن أي أضرار قد تنجم عن مثل هذا العمل.",
+  "term-9": "إذا ثبت أنك متورط في أي قرصنة أو قرصنة إلكترونية من شأنها الإضرار بموقعنا ، فسيتم إلغاء عضويتك على الفور وستتم مقاضاتك أنت وولي أمرك عن أي أضرار إلى أقصى حد يسمح به القانون في مصر وأي بلد قد تكون مقيمًا فيه. ",
+  "term-10": "أنت توافق على استخدام الموقع لأغراضك التعليمية الشخصية دون مشاركة الموقع مع الآخرين. إذا لم تلتزم بهذا الشرط ، فسيتم إنهاء عضويتك في الحال",
+  "term-11": "لقد قرأت وفهمت ووافقت على جميع الشروط والأحكام وستوافق على أي تعديلات أو إضافات للشروط والأحكام. إذا لم تفعل ذلك ، فلن تتمكن من الانضمام إلى موقعنا.",
+  "term-12": "لن يتم إصدار أي مبالغ مستردة",
+  "history-Head" :"تاريحنا"
+}

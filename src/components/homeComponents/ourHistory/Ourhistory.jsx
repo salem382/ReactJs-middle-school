@@ -1,22 +1,21 @@
 import './ourhistory.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faEnvira } from '@fortawesome/free-brands-svg-icons';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
+
 
 const OurHistory = () => {
+
+  const {t} = useTranslation();
+
+
   return (
     <Container>
       <div className='history'>
         <div className='content'>
-          <h1 className='header'>Our History</h1>
+          <h1 className='header'>{t("home-history-title")}</h1>
           <p className='para'>
-            Lorem ipsum dolor sit amet, consectetur dipiscing elit eius mod
-            tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur
-            dipiscing elit eius mod tempor incididunt ut laboreLorem ipsum dolor
-            sit amet, consectetur dipiscing elit eius mod unt ut laboreLorem
-            ipsum dolor sit amet, consectetur dipiscing elit eius mod unt ut
-            laboreLorem ipsum dolor sit amet, co{' '}
+            {t("home-history-para")}
+            {' '}
           </p>
         </div>
         <div className='video'>

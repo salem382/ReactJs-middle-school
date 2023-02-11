@@ -6,7 +6,13 @@
 }
 .left-part {
     @media(min-width:772px) {
-        border-left:1px solid #515151;
-        padding-left: 25px;
+        &:lang(en) {
+            border-left:1px solid #515151;
+            padding-left: 25px;
+        }
+        &:lang(ar) {
+            border-right:1px solid #515151;
+            padding-right: 25px;
+        }
     }
 }

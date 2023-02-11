@@ -10,9 +10,11 @@ import Setting from './pages/setting/Setting';
 import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { setOpenSidebar, setScreenSize } from './store/sidebarRouteSlice';
-import SettingP2 from './pages/setting/SettingP2';
 import Account from './pages/account/Account';
-
+import Cookies from 'js-cookie';
+import {setCurrentLang} from './store/langSlice'
+import SubjectLessons from './pages/subjectLessons/SubjectLessons';
+import {getUser} from './store/CurrentUser';
 
 
 function App() {
@@ -39,6 +41,16 @@ function App() {
   }, [screenSize]);
   /*******************************************************/
 
+  
+  const currentLang = Cookies.get('i18next') || 'en';
+  useEffect(() => {
+    document.getElementById('html').lang = currentLang;
+    dispatch(setCurrentLang(currentLang));
+    dispatch(getUser());
+  }, []);
+
+
+
 
   return (
     <section>
@@ -50,9 +62,9 @@ function App() {
           <Route path='/teachers' element={<Teachers />} />
           <Route path='/subjects' element={<Subjects />} />
           <Route path='/test' element={<Test />} />
+          <Route path='/lessons' element={<SubjectLessons />} />
           <Route path='/setting'>
               <Route index element = {<Setting />}/>
-              <Route path='pass' element = {<SettingP2 />} />  
           </Route>
           <Route path='/account' element={<Account />} />
         </Routes>

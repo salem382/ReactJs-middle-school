@@ -8,22 +8,23 @@ import Wrapper from '../../components/wrapper/Wrapper';
 import React from 'react';
 import Contact from '../../components/contact/Contact';
 import SubjectLessons from '../subjectLessons/SubjectLessons';
+import './subjectPage.scss';
+
+
 
 const Subjects = () => {
  
   return (
-    <>
+    <section className='subject-page'>
       <Sidebar />
       <Navbar />
       <Wrapper>
-        <SubjectLessons />
-        {/* <SubjectHero />
-        <Subjectsearch />
+        <SubjectHero />
         <StudyMaterial />
         <Contact />
-        <Footer /> */}
+        <Footer />
       </Wrapper>
-    </>
+    </section>
   );
 };
 

@@ -2,16 +2,18 @@ import { useSelector } from 'react-redux';
 
 const Wrapper = ({children}) => {
 
-    const { openSidebar, sidebarWidth, screeSize } = useSelector(
-        (state) => state.sidebarSlice
-      );
-    
+  const { openSidebar, sidebarWidth, screeSize } = useSelector(
+    (state) => state.sidebarSlice
+  );
+  const { lang } = useSelector(
+    (state) => state.currentLang
+  );
 
     return (
-        <div  style={{
-            paddingLeft: openSidebar && screeSize > 992 ? sidebarWidth : '0',
-            transition: 'all .3s ease-in-out'
-          }}>
+      <div  style={
+        lang == "en" ? {paddingLeft: openSidebar && screeSize > 992 ? sidebarWidth : '0', transition: 'all .3s ease-in-out'} :
+         {paddingRight: openSidebar && screeSize > 992  ? sidebarWidth : '0', transition: 'all .3s ease-in-out'}
+        }>
             {children}
         </div>
     )

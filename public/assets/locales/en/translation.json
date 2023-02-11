@@ -1,0 +1,177 @@
+{
+  
+  "navbar-log-in": "Log In",
+ 
+  "footer-about-us": "About Us",
+  "footer-contact-us": "Contact Us",
+  "footer-features": "Features",
+
+  "sign-up-form-header": "Sign up",
+  "sign-up-button-apple": "Continue With Apple",
+  "sign-up-button-google": "Continue With Google",
+  "sign-up-form-first-name": "Full Name",
+  "sign-up-form-last-name": "Parent Email",
+  "sign-up-form-Email": "Email",
+  "sign-up-form-password": "Password",
+  "sign-up-form-age": "Age",
+  "sign-up-form-gender": "Gender",
+  "sign-up-form-gender-male": "Male",
+  "sign-up-form-gender-female": "Female",
+  "sign-up-form-phone": "Phone",
+  "sign-up-form-parent-phone": "Parent phone",
+  "sign-up-form-state": "State",
+  "sign-up-form-city": "City",
+  "sign-up-form-section": "Section",
+  "sign-up-form-section-public": "Public",
+  "sign-up-form-section-language": "Language",
+  "sign-up-form-grade": "Grade",
+  "sign-up-form-grade-first": "first",
+  "sign-up-form-grade-second": "second",
+  "sign-up-form-grade-third": "third",
+  "sign-up-form-button": "Create Account",
+  "sign-up-form-paragraph": "Already have an account ? ",
+  "sign-up-form-link": "Log in",
+
+  "log-in-form-header": "Log in",
+  "log-in-form-Email": "Email",
+  "log-in-form-password": "Password",
+  "log-in-form-button": "Log in",
+  "log-in-form-paragraph": "Don't have an account ? ",
+  "log-in-form-link": "Sign up",
+  "Welcom-back" : "Welcome Back",
+
+
+
+  "sidebar-home" : "Home",
+  "sidebar-teachers":"teachers",
+  "sidebar-subkects":"Subjects",
+  "sidebar-account":"Account",
+  "sidebar-setting":"Setting",
+  "sidebar-upgrade-header":"Upgrade To Pro",
+  "sidebar-pargraph-part1":"Unlock premium",
+  "sidebar-pargraph-part2":"features for free",
+  "sidebar-try":"Try Now",
+
+
+  "Home-head1":"Learn a ton while",
+  "Home-head2":"having fun",
+  "Home-pargraph1":"Forget the old rules. You can have the best",
+  "Home-pargraph2":"learn . Right now. Right here",
+  "Home-Join-free":"Join For Free",
+  "Home-login":"Login",
+ 
+
+  
+  
+ 
+  "lessons-button-view-pdf": "View PDF",
+  "lessons-button-start-quiz": "Start Quiz",
+  "lessons-button-next": "Next",
+
+  "profile-bar-personal-info": "Personal Information",
+  "profile-bar-password": "Password",
+  "profile-personal-information-form-first-name": "Full Name",
+  "profile-personal-information-form-password": "Password",
+  "profile-personal-information-form-phone": "Phone",
+  "profile-personal-information-form-parent-phone": "Parent phone",
+  "parent_email": "parent Email",
+  "profile-personal-information-form-gender": "Gender",
+  "profile-personal-information-form-state": "State",
+  "profile-personal-information-form-city": "City",
+  "profile-personal-information-form-section": "Section",
+  "profile-personal-information-form-grade": "Grade",
+  "profile-personal-information-form-age": "Age",
+  "profile-personal-information-form-button-save": "Save",
+  "profile-personal-information-form-button-cancel": "Cancel",
+  "profile-password-form-current-password": " Current password",
+  "profile-password-form-new-password": "New Password",
+  "profile-password-form-verify-password": "Verify Password",
+  "profile-password-form-button-save": "Save",
+  "profile-password-form-button-cancel": "Cancel",
+  "submit-btn": "submit",
+
+  "ourTeachers-header": "Our Teachers",
+  "ourTeachers-card-button": "view lessons",
+
+  "portfolio-header": "Portfolio",
+
+  "home-info-feature-1-title": "Quiz after the lesson",
+  "home-info-feature-2-title": "Many Teachers",
+  "home-info-feature-3-title": "Enjoy learning",
+  
+
+
+  "home-history-title": "Our History",
+  "home-history-para": "We are an educational platform that aims to fully explain and simplify all curriculums of different schools into  very easy subjects using the newest methods of presentation and and E learning .Moreover we focus predominantly on revisions on all individual subjects, chapters and the whole curriculums with all kinds of   questions especially MCQ. Questions are hand picked and  derived from public curriculums, recent exams of all states and whole country .This will help our beloved students to obtain excellent grades without any financia",
+ 
+
+
+  "home-conv-title-main": "Let’s Start a Conversation  ",
+  "home-conv-form-name": "Name",
+  "home-conv-form-phone": "Phone",
+  "home-conv-form-email": "Email",
+  "home-conv-form-message": "Message",
+  "home-conv-form-button": "Send",
+
+
+
+
+
+  "footer-logo-para": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat",
+  "footer-contact" : "Contact",
+  "footer-number" : "+20 100 298 2946",
+  "footer-location":"location",
+  "footer-location%":"9, 6Octobr st, ain shams, Cairo, Egypt",
+  "footer-email":"Email",
+  "footer-email%":"Contact@newbrains-eg.com",
+
+
+  "subject-slide-title1" : "Learn a ton while",
+  "subject-slide-title2" : "having fun",
+
+
+
+
+
+
+
+  "video-controls-pdf": "View PDF",
+  "video-controls-next": "Next",
+  "video-controls-previous": "Previous",
+  "video-controls-start": "Start Quiz",
+
+  "side-bar-home": "Home",
+  "side-bar-profile": "Profile",
+  "side-bar-setting": "Setting",
+  "side-bar-more": "More",
+  "side-bar-logout": "Log Out",
+
+  "account-latest-Progress": "Latest Progress",
+  "account-more": "More...",
+  "account-Topic": "Topic",
+  "account-class-progress": "Class Progress",
+
+  "account-good-morning": "Good Morning",
+  "account-good-part-one": "!You’ve learned",
+  "account-good-part-two": "70% of your",
+  "account-good-part-three": " goal this week!",
+  "account-good-part-four": "Keep it up and improve your results!",
+
+  "terms-heading": "Terms and conditions ",
+  "terms-para-1": "New Brains is an educational platform that is managed by One Two Three for educational services which is an Egyptian registered company that is designated to provide all educational contents and curriculums in Egypt. ",
+  "terms-para-2": "If you would like to join our site ,you have to read ,understand and agree to all terms and conditions ",
+  "term-1": "We can not guarantee the continuation of service without any interruption for any reasons  within or outside the company and the company is not responsible for any damages that may happen as a result of this interruption. ",
+  "term-2": "We have the full right to hold the service  partially or totally for any commercial or other reasons without any warning. The company is not responsible for any damages that may happen as a result of this interruption. ",
+  "term-3": "You have no right to post any content that is illegal, obscene, political, religious, or any content that encourages violence, racism, or bullying or  of any other nature that the company sees as inappropriate and offensive. In this case we will cancel your membership immediately and we have the right to sue you and your guardian for any financial, and or punitive damages.",
+  "term-4": "You agree to pay the full monthly fees for the membership   including any additional taxes that is added to the fees. There will be no membership without payments. ",
+  "term-5": "If you pay through debit or credit cards, payments may be conducted through a third party. The company is not responsible for the safety of your personal information that is held by a third party. ",
+  "term-6": "The company holds the right to contract with a third party to run the site without any warnings with keeping all our obligations. ",
+  "term-7": "If you are under 18 years of age ,the insinuated consent of your guardian will be considered and assumed. ",
+  "term-8": "You can not use the site for any commercial purposes. If proven so ,your membership will be canceled immediately  and we keep our right to sue you and your guardian for any damages that may result from such act. ",
+  "term-9": "If proven that you are involved in any hacking or electronic piracy that will hhurt our site ,your membership will be canceled immediately and you and your guardian will be sued for any damages to the full extent of the law in Egypt and or any country that you might be residing in.",
+  "term-10": "You agree to use the site for your own personal educational purposes without sharing the site with others. If you do not comply with this term your membership will be terminated at once",
+  "term-11": "You have read ,understood and agreed to all terms and conditions and you will agree to any modifications or additions to the terms and conditions. Failure to do so ,you will not be able to join our site.",
+  "term-12": "No refunds will be issued.",
+  "teacher":"teacher"
+}
+

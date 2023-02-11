@@ -7,22 +7,22 @@ import Wrapper from "../../components/wrapper/Wrapper";
 import React from "react";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
-import { useState } from "react";
+import './settingPage.scss';
+
 
 const Setting = () => {
 
 
     return (
-        <div>
+        <section className="setting-page">
             <Sidebar />
             <Navbar />
             <Wrapper>
-                <SettingControls />
                 <Settinginfo /> 
                 <Contact/>
                 <Footer />
             </Wrapper>            
-        </div>
+        </section>
     )
 }
 

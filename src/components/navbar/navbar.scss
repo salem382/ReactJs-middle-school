@@ -2,7 +2,7 @@
 @import '../../sass/mixin.scss';
 .navbar {
     .nav-login {
-        @include blue-btn (100px, $blueColor);
+        @include blue-btn (auto, $blueColor);
         box-shadow: none;
         display: block;
     }
