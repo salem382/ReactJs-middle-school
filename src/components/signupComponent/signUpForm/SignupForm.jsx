@@ -122,9 +122,9 @@ const SignUpForm = () => {
                 <div className='d-flex justify-content-between'>
                     <div className='w-50'>
                         <select onChange={(e) => postData(e)} className='select' name="section">
-                            <option value="" disabled selected>{t("sign-up-form-section")}</option>
-                            <option value="language">{t("sign-up-form-section")}</option>
-                            <option value="public">{t("sign-up-form-section")}</option>
+                            <option value="" disabled selected hidden>{t("sign-up-form-section")}</option>
+                            <option value="language">{t("sign-up-form-section-public")}</option>
+                            <option value="public">{t("sign-up-form-section-language")}</option>
                         </select>
                         <div className='text-danger'style={{height:"20px", fontSize:"14px"}}>{errArr.section && errArr.section[0]}</div>        
                     </div>

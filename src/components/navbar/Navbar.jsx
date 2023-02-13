@@ -12,6 +12,7 @@ import TransationMenu from '../transationMenu/transationMenu';
 import { useTranslation } from 'react-i18next';
 
 
+
 const Navbar = () => {
 
     const {t} = useTranslation();
@@ -37,12 +38,12 @@ const Navbar = () => {
                 </div>
                 <div className='d-flex justify-content-end  w-75'>
                     <div className='d-flex align-items-center w-100 justify-content-end'>
-                        <span>
+                        {/* <span>
                             <FontAwesomeIcon className='fs-5 icon' icon={faRocketchat}/>
                         </span>
                         <span className='mx-4'>
                             <FontAwesomeIcon className='fs-5 icon' icon={faBell}/>
-                        </span>
+                        </span> */}
 
                         {
                             localStorage.getItem("newbrainsToken") ?(

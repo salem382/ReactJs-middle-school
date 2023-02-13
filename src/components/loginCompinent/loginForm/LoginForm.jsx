@@ -44,7 +44,7 @@ const LoginForm = () => {
             );
 
             localStorage.setItem("newbrainsToken", data.access_token);
-            navigate("/");
+            navigate("/subjects");
             setIsPost(false);
             dispatch(getUser());
         }

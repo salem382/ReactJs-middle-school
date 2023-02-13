@@ -82,9 +82,9 @@ const Settinginfo = () => {
     formData.append("state", userData.state);
     formData.append("image", image);
 
-
     setIsPost(true);
 
+    
     try {
       const { data } = await axios.post(
         'https://newbrainshigh.com/api/auth/userUpdateProfile',
