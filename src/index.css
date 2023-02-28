@@ -21,3 +21,7 @@ code {
     max-width: 100% !important;
   }
 }
+.unit-section:hover {
+  color: #fff !important;
+  background-color: #00c8d5;
+}

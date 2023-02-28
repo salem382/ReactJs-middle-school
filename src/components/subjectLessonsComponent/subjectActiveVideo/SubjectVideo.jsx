@@ -1,15 +1,25 @@
 import ReactPlayer from 'react-player';
+import { useSelector } from 'react-redux';
 import './SubjectVideo.scss';
+
+
 const SubjectActiveVideo = () => {
+
+  const {activeVideo} = useSelector(state => state.units)
+
+
   return (
-    <div className='active-video'>
+    <>
+    {activeVideo.video ?  <div className='active-video'>
       <ReactPlayer
         width='100%'
         height='50vh'
-        controls
-        url='https://www.youtube.com/watch?v=MKtBRwiQqZ8'
+        controls = {true}
+        playing = {false}
+        url={`https://newbrainsmiddle.com/lessons/videos/${activeVideo.video}`}
       />
-    </div>
+    </div> : "not found"}
+  </>
   );
 };
 

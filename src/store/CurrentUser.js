@@ -1,9 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
 export const getUser = createAsyncThunk('user/getUser' ,async (_, thunkAPI) => {
-
     const {rejectWithValue} = thunkAPI;
     try {
         const {data} = await axios.get('https://newbrainsmiddle.com/api/auth/userProfile', {
@@ -12,30 +10,29 @@ export const getUser = createAsyncThunk('user/getUser' ,async (_, thunkAPI) => {
             }
         })
         return data;
-    }catch (error) {
+    } catch (error) {
         return rejectWithValue(error.message);
     }
 })
 
-
-
 const userSlice = createSlice({
     name:'user',
-    initialState:{user:{}, isLoading: false, error:null},
-    extraReducers:{
-    [getUser.pending]:(state, action)=> {
-        state.isLoading = true;
-        state.error = null;
-    },
-    [getUser.fulfilled]:(state, action)=> {
-        state.isLoading = false;
-        state.user = {...action.payload.user};
-    },
-    [getUser.rejected]:(state, action)=> {
-        state.isLoading = false;
-        state.error = action.payload;
-    },
-    
+    initialState: { user: {}, isLoading: false, error: null },
+    reducers: {},
+    extraReducers: (builder) => {
+        builder
+            .addCase(getUser.pending, (state, action) => {
+                state.isLoading = true;
+                state.error = null;
+            })
+            .addCase(getUser.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.user = {...action.payload.user};
+            })
+            .addCase(getUser.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.payload;
+            });
     }
 }) 
 

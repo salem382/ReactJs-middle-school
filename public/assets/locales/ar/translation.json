@@ -50,8 +50,8 @@
   "sidebar-account":"الصفحة الشخصية",
   "sidebar-setting":"الإعدادت",
   "sidebar-upgrade-header":"تطوير للإحترافي",
-  "sidebar-pargraph-part1":"Unlock premium",
-  "sidebar-pargraph-part2":"features for free",
+  "sidebar-pargraph-part1":"إفتح العديد",
+  "sidebar-pargraph-part2":"الميزات مجانا",
   "sidebar-try":"جرب الأن",
 
 
@@ -92,15 +92,6 @@
 
   "ourTeachers-header": "مدرسينا",
 
-
-
-
-  "home-info-feature-1-title": "امتحان بعد الدرس",
-  "home-info-feature-1-para": "Lorem ipsum dolor sit amet",
-  "home-info-feature-2-title": "العديد من المدرسين",
-  "home-info-feature-2-para": "Lorem ipsum dolor sit amet",
-  "home-info-feature-3-title": "تعلم باستمتاع",
-  "home-info-feature-3-para": "Lorem ipsum dolor sit amet",
 
 
 
@@ -173,5 +164,17 @@
   "term-10": "أنت توافق على استخدام الموقع لأغراضك التعليمية الشخصية دون مشاركة الموقع مع الآخرين. إذا لم تلتزم بهذا الشرط ، فسيتم إنهاء عضويتك في الحال",
   "term-11": "لقد قرأت وفهمت ووافقت على جميع الشروط والأحكام وستوافق على أي تعديلات أو إضافات للشروط والأحكام. إذا لم تفعل ذلك ، فلن تتمكن من الانضمام إلى موقعنا.",
   "term-12": "لن يتم إصدار أي مبالغ مستردة",
-  "history-Head" :"تاريحنا"
+  "history-Head" :"تاريحنا",
+
+
+
+  "home-info-title": "المذاكر أسهل من هاتفك",
+  "home-info-para": "أنت تعاني من المجهود الشاق في الدراسة ، وقتك ضائع بين الدروس الخصوصية والمواصلات ، سهلنا المذاكرة عليك لتحصيل المنهج بالكامل بطريقة مبسطة ومختصرة ؛ للحصول على النتائج المرغوبة ، هنكون معك في كل مكان  على مدار٢٤ساعة ",
+  "home-info-feature-1-title": "امتحان بعد الدرس",
+  "home-info-feature-1-para": "اختبارات إلكترونية لقياس مستوي تحصيل  الطالب بنفسه",
+  "home-info-feature-2-title": "العديد من المدرسين",
+  "home-info-feature-2-para": "معلمينا هم النخبة في تدريس المناهج بطريقة إبداعية",
+  "home-info-feature-3-title": "تعلم باستمتاع",
+  "home-info-feature-3-para": "مراجعات مستمرة على كل درس ووحدة لتذكير طلابنا بأهم نقاط المنهج."
+  
 }

@@ -24,18 +24,20 @@ const Homeslider = () => {
         {t("Home-pargraph1")} <br/>
         {t("Home-pargraph2")}
         </p>
-        <div className='action'>
-         <button className='btn-solid'>
-            <Link to={'/signup'} className='nav-link'>
-              {t("Home-Join-free")} 
-            </Link>
-          </button>
-          <button className='btn-outline'>
-          <Link to={'/login'} className='nav-link'>
-            {t("Home-login")} 
-          </Link>
-          </button>
-        </div>
+        {localStorage.getItem("newbrainsToken") ? "" : (
+          <div className='action'>
+          <button className='btn-solid'>
+             <Link to={'/signup'} className='nav-link'>
+               {t("Home-Join-free")} 
+             </Link>
+           </button>
+           <button className='btn-outline'>
+           <Link to={'/login'} className='nav-link'>
+             {t("Home-login")} 
+           </Link>
+           </button>
+         </div>
+        )}
       </div>
     </Container>
   );

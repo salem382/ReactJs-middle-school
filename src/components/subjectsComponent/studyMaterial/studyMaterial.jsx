@@ -1,54 +1,37 @@
-import { Container } from 'react-bootstrap';
+import { Container , Col, Row} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './studyMaterial.scss';
 
 
+//https://newbrainsmiddle.com
 
-const studyMaterial = () => {
+const StudyMaterial = ({subjects}) => {
+
+
+
   return (
     <Container>
-      <div className='materials mt-5'>
-
-        <Link to={'/lessons'} className='nav-link'>
-        <div className='material'>
-          <img
-            className='material-img'
-            src='./imgs/subjects/materialImg.png'
-            alt=''
-          />
-          <img
-            className='menu-icon'
-            src='./imgs/subjects/menuIcon.svg'
-            alt=''
-          />
-          <div className='material-progress'>
-            <span
-              className='progress-bar'
-              style={{ width: '40%', backgroundColor: ' #00A751' }}
-            ></span>
-          </div>
-
-
-          <h4 className='name'>Arabic</h4>
-          <p className='para'>
-            Lorem ipsum dolor sit amet, ipsum consectetuer adipiscing elit....
-          </p>
-          <div className='d-flex justify-content-between'>
-            <button className='action m-0'>Start</button>
-            <span className='rate'>
+      <Row>
+          {subjects.map(subject => <Col md={3} key={subject.id} className='mt-5'>
+           <div className='material'>
               <img
-                className='rate__icon'
-                src='./imgs/subjects/rateIcon.png'
+                className='material-img w-100'
+                src='./imgs/subjects/materialImg.png'
                 alt=''
+                style={{height:"120px"}}
               />
-              <span className='rate__num'>4.3</span>
-            </span>
-          </div>
-        </div>
-        </Link>
-      </div>
+              <div className='text-center'>
+                <h6 className='name mb-3'>{subject.name}</h6>
+                <div className='d-flex justify-content-between'>
+                  <Link to={`/lessons/${subject.id}`} className='nav-link d-block w-100'>
+                    <button className='action w-50 m-auto d-block m-0'>Start</button>
+                  </Link>
+                </div>
+              </div>
+         </div></Col>)}
+      </Row>
     </Container>
   );
 };
 
-export default studyMaterial;
+export default StudyMaterial;

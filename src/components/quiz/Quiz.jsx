@@ -1,69 +1,126 @@
 import './quiz.scss';
+import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import ShowResult from '../showResult/ShowResult';
+import { useRef } from 'react';
+import {setIsEnd, inCreaseTotalSubmited, defaultTotalGrade, defaultTotalSubmited, setTotalGrade} from '../../store/showResultSlice';
 
-import { useState } from 'react';
 
 const Quiz = () => {
 
-    const [open1, setOpen1] = useState(false);
-    const [open2, setOpen2] = useState(false);
-    const [open3, setOpen3] = useState(false);
-    const [open4, setOpen4] = useState(false);
+
+  let quizRef = useRef();
+  const dispatch = useDispatch();
+  const {isEnd, totalSubmited} = useSelector(state => state.End);
+
+  const {currentQuiz, totalQuestions} = useSelector(state => state.quiz);
+
+  const {t} = useTranslation();
+
+  
+  const handleChange = (e) => {
+    e.target.parentElement.parentElement.parentElement.setAttribute("data-choice", e.target.getAttribute("data-val"));
+  };
+
+  const handelSubmit = (e) => {
+      e.preventDefault();
+      e.target.classList.add("end");
+      if (e.target.getAttribute("data-correct-ans") == e.target.getAttribute("data-choice")) {
+          let quetsionGrade = e.target.getAttribute("data-grade");
+          dispatch(setTotalGrade(Number(quetsionGrade)));
+      }
+
+      if (totalQuestions === totalSubmited ) {
+        dispatch(setIsEnd(true));
+      }  
+  }
 
 
-    const handleChange = (x) => {
-        x(true);
-        if (setOpen1 != x)
-            setOpen1(false);
-        if (setOpen2 != x)
-        setOpen2(false);
-        if (setOpen3 != x)
-        setOpen3(false);
-        if (setOpen4 != x)
-        setOpen4(false);
+  useEffect(() => {
+    // currentQuiz.questions && dispatch(setTotalQuestions(currentQuiz.questions.length));
+    return () => {
+      dispatch(defaultTotalGrade());
+      dispatch(defaultTotalSubmited());
     }
+  },[])
+ 
+  useEffect(() => {
+    if (isEnd) {
+      quizRef.current?.scrollIntoView({ behavior: "smooth" })
+    }
+  },[isEnd])
 
-    return (
-        <div className='quiz'>
-            <h3>Quiz Question 1</h3>
-            <p>
-                Which of these questions could you ask stakeholders during the early stages of a product?<br/>
-            </p>
-            <form>
+  const handleBtnClick = (e) => {
+    dispatch(inCreaseTotalSubmited());
+    e.target.classList.add('stop-click')
+  }
+
+
+  return (
+    <div className='quiz'>
+
+             {currentQuiz.questions && currentQuiz.questions.map((question) =><form onSubmit={(e) => handelSubmit(e)}  key={question.id}
+              className='quizContainer pt-3'
+              data-correct-ans= {question.correct_answer} data-grade= {question.question_grade} data-choice={""}
+              >
+                <p>
+                  {question.body}
+                </p>
+
                 <div className='element-container'>
-                    <div className='check-conatiner'>
-                        <span className='bd'></span>
-                        <input  onChange={() => handleChange(setOpen1)} type='radio' name="ansQuiz"/>
-                        <span style={{display:open1 ? 'block' : 'none'}} className='bg'></span>
-                    </div>
-                    <label>What kind of UX research have we done?</label>
+                  <div className='check-conatiner'>
+                      <input
+                        data-val = {'answer_a'}
+                        onChange={(e) =>handleChange(e)}
+                        type='radio'
+                        name='ansQuiz'
+                      />
+                  </div>
+                  <label>{question.answer_a}</label>
                 </div>
-                <div  className='element-container'>
-                    <div className='check-conatiner'>
-                        <span className='bd'></span>
-                        <input onChange={() => handleChange(setOpen2)}  type='radio' name="ansQuiz"/>
-                        <span style={{display:open2 ? 'block' : 'none'}} className='bg'></span>
-                    </div>
-                    <label>What kind of UX research have we done?</label>
+                <div className='element-container'>
+                  <div className='check-conatiner'>
+                      <input
+                      data-val = {'answer_b'}
+                       onChange={(e) =>handleChange(e)}
+                        type='radio'
+                        name='ansQuiz'
+                      />
+                  </div>
+                  <label>{question.answer_b}</label>
                 </div>
-                <div  className='element-container'>
-                    <div className='check-conatiner'>
-                        <span className='bd'></span>
-                        <input onChange={() => handleChange(setOpen3)}  type='radio' name="ansQuiz"/>
-                        <span style={{display:open3 ? 'block' : 'none'}} className='bg'></span>
-                    </div>
-                    <label>What kind of UX research have we done?</label>
+                <div className='element-container'>
+                  <div className='check-conatiner'>
+                      <input
+                      data-val = {'answer_c'}
+                       onChange={(e) =>handleChange(e)}
+                        type='radio'
+                        name='ansQuiz'
+                      />
+                  </div>
+                  <label>{question.answer_c}</label>
                 </div>
-                <div  className='element-container'>
-                    <div className='check-conatiner'>
-                        <span className='bd'></span>
-                        <input onChange={() => handleChange(setOpen4)}  type='radio' name="ansQuiz"/>
-                        <span style={{display:open4 ? 'block' : 'none'}} className='bg'></span>  
-                    </div>
-                    <label>What kind of UX research have we done?</label>
+                <div className='element-container'>
+                  <div className='check-conatiner'>
+                      <input
+                      data-val = {'answer_d'}
+                       onChange={(e) =>handleChange(e)}
+                        type='radio'
+                        name='ansQuiz'
+                      />
+                  </div>
+                  <label>{question.answer_d}</label>
                 </div>
-            </form>
-        </div>
-    )
-}
+
+
+                <button onClick={(e) => handleBtnClick(e)} className='success-button my-1'>{t("submit-btn")}</button>
+              </form>
+
+      )}
+    {isEnd && <div ref={quizRef}>{<ShowResult/>}</div>}
+    </div>
+  );
+};
 
 export default Quiz;

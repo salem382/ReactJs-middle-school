@@ -9,9 +9,42 @@ import GoodMorning from "../../components/accountComponent/goodMorning/GoodeMorn
 import Contact from '../../components/contact/Contact';
 import Footer from '../../components/footer/Footer';
 import './accountPage.scss';
-
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Account = () => {
+
+
+    
+    const [allGrade, setAllGrade] = useState([]);
+
+
+  const getData = async () => {
+
+    try {
+        const {data} = await axios.get('https://newbrainsmiddle.com/api/auth/getQuizResult', {
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem("newbrainsToken")}`
+          }
+      });
+
+      setAllGrade([...data[0]])
+      console.log(data[0])
+    }
+    catch (error) {
+
+      console.log (error);
+    }
+  }  
+  
+  useEffect(() => {
+    getData();
+  },[])
+
+
+
+
+
 
     return (
         <div className="account-page">

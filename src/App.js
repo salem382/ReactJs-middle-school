@@ -15,7 +15,8 @@ import Cookies from 'js-cookie';
 import {setCurrentLang} from './store/langSlice'
 import SubjectLessons from './pages/subjectLessons/SubjectLessons';
 import {getUser} from './store/CurrentUser';
-
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
 
@@ -55,14 +56,15 @@ function App() {
   return (
     <section>
       <BrowserRouter>
+      <ToastContainer/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
           <Route path='/teachers' element={<Teachers />} />
           <Route path='/subjects' element={<Subjects />} />
-          <Route path='/test' element={<Test />} />
-          <Route path='/lessons' element={<SubjectLessons />} />
+          <Route path='/test/:id' element={<Test />} />
+          <Route path='/lessons/:id' element={<SubjectLessons />} />
           <Route path='/setting'>
               <Route index element = {<Setting />}/>
           </Route>

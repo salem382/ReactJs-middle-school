@@ -7,6 +7,8 @@ import { useTranslation } from 'react-i18next';
 import LoadingBtn from '../../btnReload/BtnReload';
 import {getUser} from '../../../store/CurrentUser';
 import { useRef } from 'react';
+import {toast} from 'react-toastify' ;
+
 
 
 
@@ -41,10 +43,8 @@ const Settinginfo = () => {
 
   const [isPost, setIsPost] = useState(false);
   const [errArr, setErrArr] = useState({});
-  const [msg, setMsg] = useState();
   
   const postData = (e) => {
-    // formData.append(e.target.name, e.target.value); 
     let usr = {...userData};
     usr[e.target.name] = e.target.value;
     setUserData({...usr})
@@ -54,7 +54,6 @@ const Settinginfo = () => {
     setImage(e.target.files[0]);
     setFileUrl(URL.createObjectURL(e.target.files[0]));
 
-    // formData.append("image"); 
   };
 
   const clearData = () => {
@@ -67,7 +66,7 @@ const Settinginfo = () => {
   }
 
   useEffect(() => {
-    user.image ? setFileUrl("https://newbrainshigh.com/profileImages/users/" +user.image) :setFileUrl('/imgs/navbar/user.webp');
+    user.image ? setFileUrl("https://newbrainsmiddle.com/profileImages/users/" +user.image) :setFileUrl('/imgs/navbar/user.webp');
   },[user])
 
 
@@ -82,16 +81,16 @@ const Settinginfo = () => {
     formData.append("state", userData.state);
     formData.append("image", image);
 
+
     setIsPost(true);
 
-    
     try {
       const { data } = await axios.post(
-        'https://newbrainshigh.com/api/auth/userUpdateProfile',
+        'https://newbrainsmiddle.com/api/auth/userUpdateProfile',
         formData,
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem('heighNewbrainsToken')}`,
+            Authorization: `Bearer ${localStorage.getItem('newbrainsToken')}`,
             'content-type': 'multipart/form-data'
           }
         }
@@ -100,7 +99,7 @@ const Settinginfo = () => {
       setIsPost(false);
       setErrArr({});
       clearData();
-      setMsg("success");
+      toast.success(`profile updated`,{position: 'bottom-left'});
       console.log (data);
     } catch (error) {
       console.log (error);
@@ -115,13 +114,13 @@ const Settinginfo = () => {
     getData();
   };
 
+
+
   return (
     <div className='mt-5 setting-info'>
       <Container>
         <form className='mt-4' onSubmit={submitData}>
           <Row>
-
-            
             <Col md={3}>
               <div
                 className='position-relative m-auto'
@@ -148,14 +147,13 @@ const Settinginfo = () => {
               </div>
             </Col>
             <Col md={9} className='col-12'>
-
-
-
               <div className='setting-name'>
                 <input
                   onChange={(e) => postData(e)}
                   name='name'
-                  placeholder={user.name ? user.name : t(
+                  placeholder={user.name ? ` ${t(
+                    'profile-personal-information-form-first-name'
+                  )} : ${user.name}` : t(
                     'profile-personal-information-form-first-name'
                   )}
                   type='text'
@@ -169,7 +167,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='phone'
-                  placeholder={user.phone ? user.phone : t('profile-personal-information-form-phone')}
+                  placeholder={user.phone ?`${t('profile-personal-information-form-phone')} : ${user.phone}` : t('profile-personal-information-form-phone')}
                   className='me-1 me-md-0'
                   type='number'
                   ref={Phone}
@@ -182,7 +180,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='parent_email'
-                  placeholder={user.parent_email ? user.parent_email :  t('parent_email')}
+                  placeholder={user.parent_email ?`${ t('parent_email')} : ${user.parent_email}` :  t('parent_email')}
                   type='email'
                   ref={Parent_email}
                 />
@@ -194,7 +192,9 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='parent_phone'
-                  placeholder={user.parent_phone ? user.parent_phone : t(
+                  placeholder={user.parent_phone ? `${t(
+                    'profile-personal-information-form-parent-phone'
+                  )} : ${user.parent_phone}` : t(
                     'profile-personal-information-form-parent-phone'
                   )}
                   type='number'
@@ -209,7 +209,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='state'
-                  placeholder={user.state ? user.state :  t('profile-personal-information-form-state')}
+                  placeholder={user.state ? `${t('profile-personal-information-form-state')} : ${user.state}` :  t('profile-personal-information-form-state')}
                   type='text'
                   ref={state}
                 />
@@ -221,7 +221,7 @@ const Settinginfo = () => {
                 <input
                   onChange={(e) => postData(e)}
                   name='city'
-                  placeholder={user.city ? user.city : t('profile-personal-information-form-city')}
+                  placeholder={user.city ? ` ${t('profile-personal-information-form-city')} : ${user.city}`: t('profile-personal-information-form-city')}
                   type='text'
                   ref={city}
                 />
@@ -230,23 +230,17 @@ const Settinginfo = () => {
                 </div>
               </div>
               <div className='btns-setting-send-data mt-4 d-flex justify-content-end'>
-                <button className='primary-button' style={{width:"200px"}}>
-                  {isPost ? <LoadingBtn /> : <span>{t('profile-password-form-button-save')}</span>}
+                {/* <button className='light-button mx-3'>CANCEL</button> */}
+                <button className='btn btn-primary' style={{width:"200px"}}>
+                  {isPost ? <LoadingBtn /> : <span className=''>{t('profile-password-form-button-save')}</span>}
                 </button>
               </div>
-              <p style={{color:"#080", width:"240px"}} className='fw-bold ms-auto text-start mt-2 pb-4'>{msg}</p>
-            
-             
             </Col>
-
-
           </Row>
         </form>
-
-
-        
       </Container>
     </div>
+    
   );
 };
 

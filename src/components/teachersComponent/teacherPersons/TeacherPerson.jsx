@@ -1,7 +1,16 @@
+import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import './teacherpersons.scss';
 
-const Teacherpersons = () => {
+const Teacherpersons = ({teachers}) => {
+
+
+  useEffect(() => {
+
+    console.log (teachers);
+  },[])
+
+
   return (
     <Container>
       <div className='teachers mt-5'>

@@ -8,8 +8,29 @@ import Wrapper from '../../components/wrapper/Wrapper';
 import Contact from '../../components/contact/Contact';
 import Footer from '../../components/footer/Footer';
 import './subjectlessons.scss';
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import {getUnits} from '../../store/unitsSlice';
+import { useEffect } from 'react';
+
 
 const SubjectLessons = () => {
+
+  
+  
+  const params = useParams();
+  const dispatch = useDispatch();
+  const {isLoading} = useSelector(state => state.units);
+
+  useEffect (() => {
+
+    dispatch(getUnits(params.id));
+
+  },[])
+
+
+
+
   return (
     <section className='subject-lessons-page'>
       <Navbar />
@@ -22,7 +43,7 @@ const SubjectLessons = () => {
               <SubjectControls />
             </Col>
             <Col md={5}>
-              <SubjectVideos />
+              <SubjectVideos LessinIndex = {''}  active={"active"} />
               <SubjectVideos />
               <SubjectVideos />
               <SubjectVideos />
@@ -30,9 +51,9 @@ const SubjectLessons = () => {
             </Col>
           </Row>
         </Container>
-        <Contact />
-        <Footer />
       </Wrapper>
+      <Contact />
+        <Footer />
     </section>
   );
 };

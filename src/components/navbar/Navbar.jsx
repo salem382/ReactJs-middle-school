@@ -26,9 +26,7 @@ const Navbar = () => {
     return (
         <Container fluid>
             <div className='navbar d-flex py-2 justify-content-between'>
-                <div className='ps-2 ps-sm-0'
-                    style={{width:"150px"}}
-                >
+                <div className='ps-2 ps-sm-0  w-25'>
                     <FontAwesomeIcon
                         style={{cursor: 'pointer' }}
                         onClick={() => dispatch(setOpenSidebar(true))}
@@ -36,7 +34,7 @@ const Navbar = () => {
                         icon={faBars}
                     />
                 </div>
-                <div className='d-flex justify-content-end  w-75'>
+                <div className='d-flex justify-content-end  w-75 '>
                     <div className='d-flex align-items-center w-100 justify-content-end'>
                         {/* <span>
                             <FontAwesomeIcon className='fs-5 icon' icon={faRocketchat}/>
@@ -48,7 +46,7 @@ const Navbar = () => {
                         {
                             localStorage.getItem("newbrainsToken") ?(
                                 <div style={{width:"50px", height:"50px"}} className='mx-4'>
-                                    <img src={user.image ?user.image :'/imgs/navbar/user.webp'} alt='user-img' className='rounded-circle w-100 h-100'/>
+                                    <img src={user.image ? "https://newbrainsmiddle.com/profileImages/users/" + user.image :'/imgs/navbar/user.webp'} alt='user-img' className='rounded-circle w-100 h-100'/>
                                 </div>
                             ) : (
                                 <Link to={'/login'} className="nav-link d-block">

@@ -2,7 +2,6 @@ import Navbar from "../../components/navbar/Navbar";
 import SettingControls from "../../components/settingComponent/settingControls/SettingControls";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Settinginfo from "../../components/settingComponent/settingInfo/Settinginfo";
-import SettingSendData from "../../components/settingComponent/settingSendData/SettingSendData";
 import Wrapper from "../../components/wrapper/Wrapper";
 import React from "react";
 import Contact from "../../components/contact/Contact";
@@ -18,6 +17,7 @@ const Setting = () => {
             <Sidebar />
             <Navbar />
             <Wrapper>
+                <SettingControls />
                 <Settinginfo /> 
                 <Contact/>
                 <Footer />

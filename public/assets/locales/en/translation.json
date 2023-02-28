@@ -95,9 +95,6 @@
 
   "portfolio-header": "Portfolio",
 
-  "home-info-feature-1-title": "Quiz after the lesson",
-  "home-info-feature-2-title": "Many Teachers",
-  "home-info-feature-3-title": "Enjoy learning",
   
 
 
@@ -172,6 +169,19 @@
   "term-10": "You agree to use the site for your own personal educational purposes without sharing the site with others. If you do not comply with this term your membership will be terminated at once",
   "term-11": "You have read ,understood and agreed to all terms and conditions and you will agree to any modifications or additions to the terms and conditions. Failure to do so ,you will not be able to join our site.",
   "term-12": "No refunds will be issued.",
-  "teacher":"teacher"
+  "teacher":"teacher",
+
+
+
+  
+  "home-info-title": "Studying is easier",
+  "home-info-para": "You suffer from hard effort in studying, and your time is wasted between private lessons and transportation. We made it easy for you to study for the complete curriculum in a simplified and concise way",
+  "home-info-feature-1-title": "Quiz after the lesson",
+  "home-info-feature-1-para": "Electronic tests to measure the level of achievement of the student himself.",
+  "home-info-feature-2-title": "Many Teachers",
+  "home-info-feature-2-para": "Our teachers are the elite in teaching the curriculum in a creative way",
+  "home-info-feature-3-title": "Enjoy learning",
+  "home-info-feature-3-para": "Continuous reviews on each lesson and unit to remind our students of the most important points of the curriculum."
+  
 }
 

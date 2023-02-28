@@ -85,11 +85,12 @@ const SignUpForm = () => {
                 </div>
                 <div className='d-flex justify-content-between'>
                     <div className='w-50'>
-                        <select onChange={(e) => postData(e)} className='select' name="gender" id="dsf">
-                            <option value="" disabled selected hidden>{t("sign-up-form-gender")} </option>
-                            <option value="male">{t("sign-up-form-gender-male")}</option>
-                            <option value="female">{t("sign-up-form-gender-female")}</option>
-                        </select>
+                    <select onChange={(e) => postData(e)} className='select' name="gender" id="dsf" defaultValue="">
+                        <option value="" disabled hidden>{t("sign-up-form-gender")}</option>
+                        <option value="male">{t("sign-up-form-gender-male")}</option>
+                        <option value="female">{t("sign-up-form-gender-female")}</option>
+                    </select>
+
                         <div className='text-danger'style={{height:"20px", fontSize:"14px"}}>{errArr.gender && errArr.gender[0]}</div>    
                     </div>
                     <div className='w-50'>
@@ -121,20 +122,22 @@ const SignUpForm = () => {
                 </div>
                 <div className='d-flex justify-content-between'>
                     <div className='w-50'>
-                        <select onChange={(e) => postData(e)} className='select' name="section">
-                            <option value="" disabled selected hidden>{t("sign-up-form-section")}</option>
-                            <option value="language">{t("sign-up-form-section-public")}</option>
-                            <option value="public">{t("sign-up-form-section-language")}</option>
-                        </select>
+                    <select onChange={(e) => postData(e)} className='select' name="section" defaultValue="">
+                        <option value="" disabled hidden>{t("sign-up-form-section")}</option>
+                        <option value="public">{t("sign-up-form-section-public")}</option>
+                        <option value="language">{t("sign-up-form-section-language")}</option>
+                    </select>
+
                         <div className='text-danger'style={{height:"20px", fontSize:"14px"}}>{errArr.section && errArr.section[0]}</div>        
                     </div>
                     <div className='w-50'>
-                        <select onChange={(e) => postData(e)} className='select' name="grade">
-                            <option value="" disabled selected hidden>{t("sign-up-form-grade")}</option>
-                            <option value="first">{t("sign-up-form-grade-first")}</option>
-                            <option value="second">{t("sign-up-form-grade-second")}</option>
-                            <option value="third">{t("sign-up-form-grade-third")}</option>
-                        </select>
+                    <select onChange={(e) => postData(e)} className='select' name="grade" defaultValue="">
+                        <option value="" disabled hidden>{t("sign-up-form-grade")}</option>
+                        <option value="first">{t("sign-up-form-grade-first")}</option>
+                        <option value="second">{t("sign-up-form-grade-second")}</option>
+                        <option value="third">{t("sign-up-form-grade-third")}</option>
+                    </select>
+
                         <div className='text-danger'style={{height:"20px", fontSize:"14px"}}>{errArr.grade && errArr.grade[0]}</div>    
                     </div>
                 </div>
