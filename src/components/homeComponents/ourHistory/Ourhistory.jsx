@@ -13,7 +13,7 @@ const OurHistory = () => {
       <div className='history'>
         <div className='content'>
           <h1 className='header'>{t("home-history-title")}</h1>
-          <p className='para'>
+          <p className='para' style={{fontSize:'16px'}}>
             {t("home-history-para")}
             {' '}
           </p>

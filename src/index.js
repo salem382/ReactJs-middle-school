@@ -30,16 +30,10 @@ i18n
 
 
 
-
-
-
-
-
-
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>    
-  </React.StrictMode>
+  // </React.StrictMode>
 );

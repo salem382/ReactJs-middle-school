@@ -20,14 +20,14 @@ const SubjectControls = () => {
         </div>
       </div>
       <div className='lesson-actions'>
-        <button className='prev'>{t("video-controls-previous")}</button>
-        <button className='pdf'>{t("video-controls-pdf")}</button>
-
-        <Link to={`/test/${activeVideo.id}`} className='nav-link'>
+        <a className='pdf' style={{textDecoration:'none'}} href={"http://localhost:5000/" + activeVideo.pdf} target={'_blank'}>
+          {t("video-controls-pdf")}
+        </a>
+        <Link to={`/test/${activeVideo._id}`} className='nav-link'>
             <button className='start'>{t("video-controls-start")}</button>
         </Link>
 
-        <button className={noNext ?"next stop-click" : 'next'} style={{ pointerEvents : noNext && "none",background:noNext? "#ccc" : "15be4f"}} onClick={() => dispatch(nextBtn())} >{t("video-controls-next")}</button>
+        <button className={noNext ?"next stop-click" : 'next'} style={{ pointerEvents : noNext && "none",background:noNext? "#ccc" : "#15be4f"}} onClick={() => dispatch(nextBtn())} >{t("video-controls-next")}</button>
        
       </div>
     </div>

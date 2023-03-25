@@ -13,28 +13,16 @@ const SettingControls = () => {
     
 
 
-    //https://newbrainsmiddle.com
-    //localStorage.getItem('newbrainsToken')
-
-    /*
     
-    
-  const { name, teacher_name, teacher_image, teacher_id, id, image } = subjectData;
-  const teacherImageUrl = "https://newbrainshigh.com/profileImages/teachers/";
-  const SubjectImageUrl = "https://newbrainshigh.com/subjects/";
-
-    */
-
-
+ 
 
 
     const handleLogout = async () => {
 
-        let token = localStorage.getItem("newbrainsToken");
         try {
-            const {data} = await axios.post('https://newbrainsmiddle.com/api/auth/userLogout',null, {
+            const {data} = await axios.post('http://localhost:5000/user/logout',null, {
                 headers: {
-                  'Authorization': `Bearer ${token}`
+                  token: `${localStorage.getItem("newbrainsToken")}`
                 }
             })
             

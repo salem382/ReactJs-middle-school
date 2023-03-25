@@ -2,8 +2,11 @@ import './homeslider.scss';
 import { Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Homeslider = () => {
+
+  const { lang } = useSelector((state) => state.currentLang);
 
 
   const {t} = useTranslation();
@@ -13,10 +16,8 @@ const Homeslider = () => {
     <Container>
       <div
         className='banner'
-        style={{
-          background: 'url("/imgs/home/BannerBK.png") no-repeat',
-          backgroundSize: 'cover',
-        }}
+        style={{background:lang === "en" ?'url(' +`${require("../../../assets/imgs/home/bg-en.png")}` + ') no-repeat':
+      'url(' +`${require("../../../assets/imgs/home/bg-ar.jpg")}` + ') no-repeat', backgroundSize:'cover'}}
       >
         <h1 className='banner__header--l1'>{t("Home-head1")}</h1>
         <h1 className='banner__header--l2'>{t("Home-head2")}</h1>

@@ -5,57 +5,18 @@ import './teacherpersons.scss';
 const Teacherpersons = ({teachers}) => {
 
 
-  useEffect(() => {
-
-    console.log (teachers);
-  },[])
-
 
   return (
     <Container>
       <div className='teachers mt-5'>
-        <div className='teacher'>
-          <img src='./imgs/teachers/teacherImg.png' alt='' />
-          <h4 className='name'>Mr. Hashem hany</h4>
-          <p className='title'>Biology teacher</p>
-          <span className='school'>middle School</span>
-          <button className='action'>view lessons</button>
-        </div>
-        <div className='teacher'>
-          <img src='./imgs/teachers/teacherImg.png' alt='' />
-          <h4 className='name'>Mr. Hashem hany</h4>
-          <p className='title'>Biology teacher</p>
-          <span className='school'>middle School</span>
-          <button className='action'>view lessons</button>
-        </div>
-        <div className='teacher'>
-          <img src='./imgs/teachers/teacherImg.png' alt='' />
-          <h4 className='name'>Mr. Hashem hany</h4>
-          <p className='title'>Biology teacher</p>
-          <span className='school'>middle School</span>
-          <button className='action'>view lessons</button>
-        </div>
-        <div className='teacher'>
-          <img src='./imgs/teachers/teacherImg.png' alt='' />
-          <h4 className='name'>Mr. Hashem hany</h4>
-          <p className='title'>Biology teacher</p>
-          <span className='school'>middle School</span>
-          <button className='action'>view lessons</button>
-        </div>
-        <div className='teacher'>
-          <img src='./imgs/teachers/teacherImg.png' alt='' />
-          <h4 className='name'>Mr. Hashem hany</h4>
-          <p className='title'>Biology teacher</p>
-          <span className='school'>middle School</span>
-          <button className='action'>view lessons</button>
-        </div>
-        <div className='teacher'>
-          <img src='./imgs/teachers/teacherImg.png' alt='' />
-          <h4 className='name'>Mr. Hashem hany</h4>
-          <p className='title'>Biology teacher</p>
-          <span className='school'>middle School</span>
-          <button className='action'>view lessons</button>
-        </div>
+        {teachers.map(teacher=> <div className='teacher' key={teacher._id}>
+          <img src={'http://localhost:5000/' + teacher.image} alt=''
+          style={{height:"200px"}}
+          />
+          <h4 className='name'>Mr. {teacher.name}</h4>
+          <span className='school'>subject :{teacher.subject}</span> <br/>
+          <span className='school'> grade :{teacher. grade}</span>
+        </div>)}
       </div>
     </Container>
   );

@@ -43,20 +43,12 @@ const StartConversion = () => {
   const getData = async() => {
       setIsPost(true);
       try {
-          const {data} = await axios.get(`https://newbrainsmiddle.com/api/contactUs?name=${userData.name}&message=${userData.message}&phone=${userData.phone}&email=${userData.email}`,null, {
-            params:{
-              name:userData.name,
-              message:userData.message,
-              phone:userData.phone,
-              email:userData.email
-            }
-          })
+          const {data} = await axios.post(`http://localhost:5000/contact`, userData)
           clearData();
           setIsPost(false);
           toast.success(`Message Sent`,{position: 'bottom-right'});
       }
       catch (error) {
-        console.log (error)
           setIsPost(false);
       }
   }
@@ -78,12 +70,14 @@ const StartConversion = () => {
           <input
             onChange={(e) => postData(e)}
             className='form-input'
+            ref={nameInput}
             type='text'
             name='name'
             placeholder={t("home-conv-form-name")}
           />
           <input
           onChange={(e) => postData(e)}
+          ref={phoneInput}
             className='form-input'
             type='text'
             name='phone'
@@ -91,6 +85,7 @@ const StartConversion = () => {
           />
           <input
           onChange={(e) => postData(e)}
+          ref={emailInput}
             className='form-input'
             type='email'
             name='email'
@@ -98,6 +93,7 @@ const StartConversion = () => {
           />
           <textarea
           onChange={(e) => postData(e)}
+          ref={messageInput}
             className='form-input'
             name='message'
             placeholder={t("home-conv-form-message")}

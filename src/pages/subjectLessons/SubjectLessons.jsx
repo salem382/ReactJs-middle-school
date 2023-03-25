@@ -17,10 +17,9 @@ import { useEffect } from 'react';
 const SubjectLessons = () => {
 
   
-  
   const params = useParams();
   const dispatch = useDispatch();
-  const {isLoading} = useSelector(state => state.units);
+  const {currentUnitsLessons, activeVideoIndex} = useSelector(state => state.units);
 
   useEffect (() => {
 
@@ -43,11 +42,12 @@ const SubjectLessons = () => {
               <SubjectControls />
             </Col>
             <Col md={5}>
-              <SubjectVideos LessinIndex = {''}  active={"active"} />
-              <SubjectVideos />
-              <SubjectVideos />
-              <SubjectVideos />
-              <SubjectVideos />
+              {currentUnitsLessons.map((lesson, indx) =>  <SubjectVideos
+               lessonIndx={indx} 
+               key={indx} 
+               lesson = {lesson} 
+               active={activeVideoIndex === indx ? "active" : ""} />)}
+  
             </Col>
           </Row>
         </Container>

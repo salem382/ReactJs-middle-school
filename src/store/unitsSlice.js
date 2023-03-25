@@ -9,10 +9,10 @@ async(unitId, thunkAPI) => {
 
     const {rejectWithValue} = thunkAPI;
     try {
-        const {data} = await axios.get (`https://newbrainsmiddle.com/api/auth/getUnits/${unitId}`,
+        const {data} = await axios.get (`http://localhost:5000/unit/${unitId}`,
         {
             headers: {
-              Authorization: `Bearer ${localStorage.getItem("newbrainsToken")}`,
+              token: `${localStorage.getItem("newbrainsToken")}`,
             }
         })  
               
@@ -41,8 +41,10 @@ const unitsSlice = createSlice({
        
         setCurrentLessons :(state, action) => {
             state.currentUnitsLessons = [...state.units[action.payload].lessons];
-            state.currentUnitsLessons.length > 0 ? state.noNext = true : state.noNext = false; 
+            state.currentUnitsLessons.length <= 1 ? state.noNext = true : state.noNext = false;
             state.currentUnit = state.units[action.payload].name;
+            state.activeVideo = {...state.currentUnitsLessons[0]};
+            state.activeVideoIndex = 0;
         },
         setCurrentVideo : (state, action) => {
             state.activeVideoIndex = action.payload;
@@ -65,7 +67,7 @@ const unitsSlice = createSlice({
     },
     [getUnits.fulfilled]:(state, action)=> {
         state.isLoading = false;
-        state.units= JSON.parse(JSON.stringify(action.payload.result));
+        state.units= JSON.parse(JSON.stringify(action.payload.units));
         state.currentUnitsLessons = [...state.units[0].lessons];
         state.activeVideo = {...[...state.units[0].lessons][0]};
         state.currentUnit = state.units[0].name;

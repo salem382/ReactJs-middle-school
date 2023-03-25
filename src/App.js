@@ -16,7 +16,14 @@ import {setCurrentLang} from './store/langSlice'
 import SubjectLessons from './pages/subjectLessons/SubjectLessons';
 import {getUser} from './store/CurrentUser';
 import {ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import 'react-toastify/dist/ReactToastify.css';
+import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions';
+import ReturnPolicies from './pages/ReturnedPolicies/ReturnedPolicies';
+import PrivacyPolicies from './pages/PrivacyPolicies/PrivacyPolicies';
+import CancilationPolicy from './pages/CancilationPolicy/CancilationPolicy';
+import Membership from './pages/Membership/Membership';
+
+
 
 function App() {
 
@@ -69,6 +76,14 @@ function App() {
               <Route index element = {<Setting />}/>
           </Route>
           <Route path='/account' element={<Account />} />
+
+          <Route path='/terms' element={<TermsAndConditions />} />
+           <Route path='/returnpolicies' element={<ReturnPolicies />} />
+          <Route path='/privacypolicies' element={<PrivacyPolicies />} />
+          <Route path='/CancilationPolicy' element={<CancilationPolicy />} />
+          <Route path='/membership' element={<Membership />} />
+
+          <Route path='*' element={<div className='fs-1 text-center mt-5 text-danger'>Page Not Found 404!</div>} />
         </Routes>
       </BrowserRouter>
     </section>

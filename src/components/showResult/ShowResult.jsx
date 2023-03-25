@@ -2,32 +2,32 @@ import { useSelector } from 'react-redux';
 import './showResult.scss'
 import axios from 'axios';
 import { useEffect} from 'react';
+import { useState } from 'react';
 
-const ShowResult = () => {
+
+const ShowResult = ({answers}) => {
 
 
     const {currentQuiz} = useSelector(state => state.quiz);
-    const {user} = useSelector(state => state.currentUser);
-    const {totalGrade} = useSelector(state => state.End);
-
+    const [result, setResult] = useState({});
 
     const sendData = async() => {
+
+        let sendingData = {
+            assignment_id:currentQuiz._id,
+            answers
+        }
+
         try {
-  
-           await axios.get(`https://newbrainsmiddle.com/api/auth/quizResult`,{
-  
-                params: {
-                    exam_id:currentQuiz.id, 
-                    user_id:user.id,
-                    total_grade: currentQuiz.total_grad,
-                    correct_questions_grade:totalGrade
-                    },
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem("newbrainsToken")}`,
-                }
-            }
-            );
-            
+           const {data} = await axios.post(`http://localhost:5000/result`, sendingData,
+           {
+            headers: {
+              token: `${localStorage.getItem("newbrainsToken")}`,
+            },
+          }
+           
+           );
+           setResult({...data})
         }
         catch (error) {
             console.log (error);
@@ -55,7 +55,8 @@ const ShowResult = () => {
                 <div className="check-shadow"></div>
             </div>
             <div className="text fs-4">your score is
-            <span className='mx-1' style={{color:"#080"}}>{currentQuiz.total_grad} / {totalGrade}</span></div>
+            <span className='mx-1' style={{color:"#080"}}>{result.total_grade} / {result.student_grade}</span>
+            </div>
         </div>  
     
         </>

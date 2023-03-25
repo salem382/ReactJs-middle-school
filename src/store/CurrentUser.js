@@ -1,24 +1,27 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import jwt_decode from "jwt-decode";
 
 export const getUser = createAsyncThunk('user/getUser' ,async (_, thunkAPI) => {
     const {rejectWithValue} = thunkAPI;
     try {
-        const {data} = await axios.get('https://newbrainsmiddle.com/api/auth/userProfile', {
+        const {data} = await axios.get('http://localhost:5000/user', {
             headers: {
-              'Authorization': `Bearer ${localStorage.getItem("newbrainsToken")}`
+              token: `${localStorage.getItem("newbrainsToken")}`
             }
         })
         return data;
     } catch (error) {
-        return rejectWithValue(error.message);
+        return rejectWithValue(error.response.data.message);
     }
 })
 
 const userSlice = createSlice({
     name:'user',
     initialState: { user: {}, isLoading: false, error: null },
-    reducers: {},
+    reducers: {
+        
+    },
     extraReducers: (builder) => {
         builder
             .addCase(getUser.pending, (state, action) => {

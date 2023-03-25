@@ -23,14 +23,14 @@ const Teachers = () => {
     setIsLoading(true);
     setIsError(false);
 
-    try {
-        const {data} = await axios.get ("https://newbrainsmiddle.com/api/getAllTeachers");
-        setTeachers([...data.result]);
-        console.log (data);
+    try {  
+        const {data} = await axios.get("http://localhost:5000/teacher");
+        setTeachers([...data.teachers]);
     }
     catch (error) {
     console.log (error)
     setIsError(true);
+    console.log (error)
     }
     setIsLoading(false);
 

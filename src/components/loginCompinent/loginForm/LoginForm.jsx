@@ -2,15 +2,13 @@ import './loginform.scss';
 import SocialSign from '../../signupComponent/socialSign/Socialsign';
 import TopPartSignup from '../../signupComponent/topPartSignUp/TopPartSignup';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faEye} from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import {getUser} from '../../../store/CurrentUser';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import BtnReload from '../../btnReload/BtnReload';
+import {getUser} from '../../../store/CurrentUser'
 
 const LoginForm = () => {
 
@@ -37,13 +35,8 @@ const LoginForm = () => {
     const getData = async() => {
         setIsPost(true);
         try {
-            const {data} = await axios.post(`https://newbrainsmiddle.com/api/auth/userLogin`,null,{
-
-                params: { email: userData.email, password: userData.password }
-            }
-            );
-
-            localStorage.setItem("newbrainsToken", data.access_token);
+            const {data} = await axios.post(`http://localhost:5000/user/login`,userData);
+            localStorage.setItem("newbrainsToken", data.token);
             navigate("/subjects");
             setIsPost(false);
             dispatch(getUser());
@@ -51,6 +44,7 @@ const LoginForm = () => {
         catch (error) {
             setIsPost(false);
             error.response.data.message && setMsg(error.response.data.message);
+            console.log (error);
         }
         
     }

@@ -16,12 +16,9 @@ const Subjects = () => {
 
 
 
-  const token = localStorage.getItem("newbrainsToken");
-
   const [Subjects, setSubjects] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-
 
 
   const dataFetch = async () => {
@@ -30,15 +27,16 @@ const Subjects = () => {
     setIsError(false);
     try {
       const {data} = await axios.get(
-        "https://newbrainsmiddle.com/api/auth/getSubjects",
+        "http://localhost:5000/subject",
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            token: `${localStorage.getItem("newbrainsToken")}`,
           },
         }
       );
 
       setSubjects([...data.subjects])
+      console.log (data.subjects);
 
     }
     catch (error) {

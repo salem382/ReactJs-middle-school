@@ -10,6 +10,7 @@ import BtnReload from '../../btnReload/BtnReload';
 
 
 
+
 const SignUpForm = () => {
 
     const {t} = useTranslation();
@@ -42,14 +43,16 @@ const SignUpForm = () => {
 
     const getData = async() => {
         setIsPost(true);
-        try {
-            const {data} = await axios.post('https://newbrainsmiddle.com/api/auth/userRegister',userData)
+        try {             
+            const {data} = await axios.post('http://localhost:5000/user/signup',userData)
            navigate('/login');
+           console.log (data)
         }
         catch (error) {
             setIsPost(false);
-            error.response.data.message ?  setMsg("This Email is Already Registed use Another One"):
-            setErrArr({...JSON.parse(error.response.data)});
+            console.log (error.response.data)
+            error.response.data.message  != 'success' && setMsg("This Email is Already Registed use Another One")
+            // setErrArr({...JSON.parse(error.response.data.message)});
         }
     }
 
